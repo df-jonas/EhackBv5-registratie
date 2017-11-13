@@ -10,7 +10,7 @@ composer install
 ```
 This will create a vendor directory with the necessary dependencies for this project.
 
-Rename the `.env.example` to `.env` and edit the `.env` file and add your database credentials (`DB_DATABASE`, `DB_USERNAME`, `DB_PASSWORD`). **This file will be provided in internal communication.** For example:
+Edit the `.env` file and add your database credentials (`DB_DATABASE`, `DB_USERNAME`, `DB_PASSWORD`). **This file will be provided in internal communication.** For example:
 ```
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
