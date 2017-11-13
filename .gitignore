@@ -1,3 +1,10 @@
+# IDE
+.idea/
+
+# GIT
+.git/
+
+# Laravel
 vendor/
 node_modules/
 npm-debug.log
