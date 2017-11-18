@@ -54,3 +54,10 @@ Route::group(['middleware' => 'web'], function () {
 
 
 });
+
+Route::group(['middleware' => ['auth', 'admin']], function () {
+    Route::get('admin', 'Admin\AdminController@index');
+    Route::get('admin/statistics', 'Admin\AdminController@statistics');
+    Route::get('admin/manage', 'Admin\AdminController@manage');
+    Route::post('admin/manage', 'Admin\AdminController@managePost');
+});
