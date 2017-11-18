@@ -60,4 +60,5 @@ Route::group(['middleware' => ['auth', 'admin']], function () {
     Route::get('admin/statistics', 'Admin\AdminController@statistics');
     Route::get('admin/manage', 'Admin\AdminController@manage');
     Route::post('admin/manage', 'Admin\AdminController@managePost');
+    Route::get('admin/manage/{activity_id}', 'Admin\AdminController@jsonService');
 });

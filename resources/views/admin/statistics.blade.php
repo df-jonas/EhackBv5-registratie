@@ -7,7 +7,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">Statistics</div>
                     <div class="panel-body">
-
+                        <p>Total users: {{ $useramount }}</p>
                     </div>
                 </div>
             </div>
