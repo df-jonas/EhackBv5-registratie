@@ -4,7 +4,9 @@ namespace App\Http\Controllers\Admin;
 
 use App\Activity;
 use App\ActivityGroup;
+use App\Game;
 use App\Http\Controllers\Controller;
+use App\Team;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -26,8 +28,14 @@ class AdminController extends Controller
     {
         $userAmount = User::all()->where('isAdmin', '!=', '1')->count();
 
+        $activities = Activity::with('users')->get();
+
+        $games = Game::with('teams')->get();
+
         $variables = [
             'useramount' => $userAmount,
+            'activities' => $activities,
+            'games' => $games,
         ];
 
         return view('admin.statistics', $variables);
