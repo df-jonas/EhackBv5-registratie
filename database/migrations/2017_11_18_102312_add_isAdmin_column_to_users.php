@@ -14,7 +14,7 @@ class AddIsAdminColumnToUsers extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->boolean('isAdmin')->after('password');
+            $table->boolean('isAdmin')->default(0)->after('password');
         });
     }
 
