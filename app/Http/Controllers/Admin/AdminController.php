@@ -47,6 +47,25 @@ class AdminController extends Controller
 
         $activities = Activity::all();
 
+        $games = Game::all();
+
+        $variables = [
+            'error' => $error,
+            'errormsg' => $errormsg,
+            'categories' => $activitygroups,
+            'activities' => $activities,
+            'games' => $games,
+        ];
+
+        return view('admin.manage', $variables);
+    }
+
+    public function manageActivity($error = -1, $errormsg = null)
+    {
+        $activitygroups = ActivityGroup::all();
+
+        $activities = Activity::all();
+
         $variables = [
             'error' => $error,
             'errormsg' => $errormsg,
@@ -54,10 +73,23 @@ class AdminController extends Controller
             'activities' => $activities,
         ];
 
-        return view('admin.manage', $variables);
+        return view('admin.manageActivity', $variables);
     }
 
-    public function managePost(Request $request)
+    public function manageGame($error = -1, $errormsg = null)
+    {
+        $games = Game::all();
+
+        $variables = [
+            'error' => $error,
+            'errormsg' => $errormsg,
+            'games' => $games,
+        ];
+
+        return view('admin.manageGame', $variables);
+    }
+
+    public function managePostActivity(Request $request)
     {
         $error = 1;
 
@@ -108,10 +140,74 @@ class AdminController extends Controller
             }
         }
 
-        return $this->manage($error);
+        return $this->manageActivity($error);
     }
 
-    public function jsonService($activity_id)
+    public function managePostGame(Request $request)
+    {
+        $error = 1;
+
+        if (isset($request->formtype)) {
+
+            switch ($request->formtype) {
+                case "newgame":
+                    if (isset($request->name) && isset($request->maxpersons) && isset($request->maxteams)
+                        && $request->name != "" && $request->maxpersons > 0 && $request->maxteams > 0) {
+
+                        $a = new Game();
+
+                        $a->name = $request->name;
+                        $a->maxPlayers = $request->maxpersons;
+                        $a->maxTeams = $request->maxteams;
+
+                        if (isset($request->isSingle) || $request->maxpersons == 1) {
+                            $a->isSingleplayer = 1;
+                        } else {
+                            $a->isSingleplayer = 0;
+                        }
+
+                        $a->save();
+
+                        $error = 0;
+                    } else {
+                        $error = 1;
+                    }
+                    break;
+
+                case "editgame":
+                    if (isset($request->id) && isset($request->name) && isset($request->maxpersons) && isset($request->maxteams)
+                        && Game::find($request->id) != null && $request->name != "" && $request->maxpersons > 0 && $request->maxteams > 0) {
+
+                        $a = Game::find($request->id);
+
+                        $a->name = $request->name;
+                        $a->maxPlayers = $request->maxpersons;
+                        $a->maxTeams = $request->maxteams;
+
+                        if (isset($request->isSingle) || $request->maxpersons == 1) {
+                            $a->isSingleplayer = 1;
+                        } else {
+                            $a->isSingleplayer = 0;
+                        }
+
+                        $a->save();
+
+                        $error = 0;
+                    } else {
+                        $error = 1;
+                    }
+                    break;
+
+                default:
+                    $error = 1;
+                    break;
+            }
+        }
+
+        return $this->manageGame($error);
+    }
+
+    public function jsonServiceActivity($activity_id)
     {
         $a = Activity::find($activity_id);
 
@@ -120,5 +216,16 @@ class AdminController extends Controller
         }
 
         return response()->json(Activity::first(), 200);
+    }
+
+    public function jsonServiceGame($game_id)
+    {
+        $a = Game::find($game_id);
+
+        if ($a != null) {
+            return response()->json($a, 200);
+        }
+
+        return response()->json(Game::first(), 200);
     }
 }

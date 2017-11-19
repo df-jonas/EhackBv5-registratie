@@ -57,8 +57,22 @@ Route::group(['middleware' => 'web'], function () {
 
 Route::group(['middleware' => ['auth', 'admin']], function () {
     Route::get('admin', 'Admin\AdminController@index');
+
     Route::get('admin/statistics', 'Admin\AdminController@statistics');
+
     Route::get('admin/manage', 'Admin\AdminController@manage');
-    Route::post('admin/manage', 'Admin\AdminController@managePost');
-    Route::get('admin/manage/{activity_id}', 'Admin\AdminController@jsonService');
+
+    Route::get('admin/manage/activity', 'Admin\AdminController@manageActivity');
+    Route::post('admin/manage/activity', 'Admin\AdminController@managePostActivity');
+    Route::get('admin/manage/activity/{activity_id}', 'Admin\AdminController@jsonServiceActivity');
+
+    Route::get('admin/manage/game', 'Admin\AdminController@manageGame');
+    Route::post('admin/manage/game', 'Admin\AdminController@managePostGame');
+    Route::get('admin/manage/game/{game_id}', 'Admin\AdminController@jsonServiceGame');
+
+
+
+
+
+
 });
