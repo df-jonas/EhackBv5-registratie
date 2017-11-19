@@ -33,7 +33,7 @@
                                 <label for="newactivity_maxpersons">Maximum aantal personen</label>
                                 <input type="number" id="newactivity_maxpersons" class="form-control"
                                        name="maxpersons"
-                                       value="20" autocomplete="off" required>
+                                       value="60" autocomplete="off" required>
                             </div>
 
                             <div class="form-group col-md-12">
@@ -71,6 +71,7 @@
                             <div class="form-group col-md-12">
                                 <label for="editactivity_id">Naam van de activiteit</label>
                                 <select id="editactivity_id" class="form-control" name="id" required>
+                                    <option value=""></option>
                                     @foreach ($activities as $activity)
                                         <option value="{{$activity->id}}">{{$activity->name}}</option>
                                     @endforeach
@@ -87,7 +88,7 @@
                                 <label for="editactivity_maxpersons">Maximum aantal personen</label>
                                 <input type="number" id="editactivity_maxpersons" class="form-control"
                                        name="maxpersons"
-                                       value="20" autocomplete="off" required>
+                                       value="60" autocomplete="off" required>
                             </div>
 
                             <div class="form-group col-md-12">

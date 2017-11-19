@@ -12,6 +12,9 @@
                     <div class="panel-body">
                         <a href="{{ url('admin/manage/game') }}">Beheer games.</a>
                     </div>
+                    <div class="panel-body">
+                        <a href="{{ url('admin/manage/option') }}">Beheer opties.</a>
+                    </div>
                 </div>
             </div>
         </div>

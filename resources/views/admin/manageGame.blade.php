@@ -25,17 +25,20 @@
 
                             <div class="form-group col-md-12">
                                 <label for="newgame_name">Naam van de game</label>
-                                <input type="text" id="newgame_name" class="form-control" name="name" autocomplete="off" required>
+                                <input type="text" id="newgame_name" class="form-control" name="name" autocomplete="off"
+                                       required>
                             </div>
 
                             <div class="form-group col-md-6">
                                 <label for="newgame_maxpersons">Aantal personen per team</label>
-                                <input type="number" id="newgame_maxpersons" class="form-control" name="maxpersons" value="20" autocomplete="off" required>
+                                <input type="number" id="newgame_maxpersons" class="form-control" name="maxpersons"
+                                       value="5" autocomplete="off" required>
                             </div>
 
                             <div class="form-group col-md-6">
                                 <label for="newgame_maxteams">Maximum aantal teams</label>
-                                <input type="number" id="newgame_maxteams" class="form-control" name="maxteams" value="20" autocomplete="off" required>
+                                <input type="number" id="newgame_maxteams" class="form-control" name="maxteams"
+                                       value="15" autocomplete="off" required>
                             </div>
 
 
@@ -45,7 +48,8 @@
                                     Dit spel is single player
                                 </label>
                             </div>
-                            <div class="clearfix"></div><br>
+                            <div class="clearfix"></div>
+                            <br>
 
                             <div class="form-group col-md-12">
                                 <button type="submit" class="btn btn-primary">Verzenden</button>
@@ -67,6 +71,7 @@
                             <div class="form-group col-md-12">
                                 <label for="editgame_id">Naam van de game</label>
                                 <select id="editgame_id" class="form-control" name="id" required>
+                                    <option value=""></option>
                                     @foreach ($games as $game)
                                         <option value="{{$game->id}}">{{$game->name}}</option>
                                     @endforeach
@@ -75,27 +80,32 @@
 
                             <div class="form-group col-md-12">
                                 <label for="editgame_name">Naam van de game</label>
-                                <input type="text" id="editgame_name" class="form-control" name="name" autocomplete="off" required>
+                                <input type="text" id="editgame_name" class="form-control" name="name"
+                                       autocomplete="off" required>
                             </div>
 
                             <div class="form-group col-md-6">
                                 <label for="editgame_maxpersons">Aantal personen per team</label>
-                                <input type="number" id="editgame_maxpersons" class="form-control" name="maxpersons" value="20" autocomplete="off" required>
+                                <input type="number" id="editgame_maxpersons" class="form-control" name="maxpersons"
+                                       value="5" autocomplete="off" required>
                             </div>
 
                             <div class="form-group col-md-6">
                                 <label for="editgame_maxteams">Maximum aantal teams</label>
-                                <input type="number" id="editgame_maxteams" class="form-control" name="maxteams" value="20" autocomplete="off" required>
+                                <input type="number" id="editgame_maxteams" class="form-control" name="maxteams"
+                                       value="15" autocomplete="off" required>
                             </div>
 
 
                             <div class="form-check col-md-12">
                                 <label class="form-check-label">
-                                    <input id="editgame_isSingle" class="form-check-input" type="checkbox" name="isSingle" value="">
+                                    <input id="editgame_isSingle" class="form-check-input" type="checkbox"
+                                           name="isSingle" value="">
                                     Dit spel is single player
                                 </label>
                             </div>
-                            <div class="clearfix"></div><br>
+                            <div class="clearfix"></div>
+                            <br>
 
                             <div class="form-group col-md-12">
                                 <button type="submit" class="btn btn-primary">Verzenden</button>

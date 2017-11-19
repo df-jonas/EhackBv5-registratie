@@ -55,24 +55,30 @@ Route::group(['middleware' => 'web'], function () {
 
 });
 
+// Admin panel
 Route::group(['middleware' => ['auth', 'admin']], function () {
+
+    // Menu (home)
     Route::get('admin', 'Admin\AdminController@index');
 
+    // Show statistics
     Route::get('admin/statistics', 'Admin\AdminController@statistics');
 
+    // Menu (manage)
     Route::get('admin/manage', 'Admin\AdminController@manage');
 
+    // Edit or create activity
     Route::get('admin/manage/activity', 'Admin\AdminController@manageActivity');
     Route::post('admin/manage/activity', 'Admin\AdminController@managePostActivity');
     Route::get('admin/manage/activity/{activity_id}', 'Admin\AdminController@jsonServiceActivity');
 
+    // Edit or create game
     Route::get('admin/manage/game', 'Admin\AdminController@manageGame');
     Route::post('admin/manage/game', 'Admin\AdminController@managePostGame');
     Route::get('admin/manage/game/{game_id}', 'Admin\AdminController@jsonServiceGame');
 
-
-
-
-
-
+    // Edit or create option
+    Route::get('admin/manage/option', 'Admin\AdminController@manageOption');
+    Route::post('admin/manage/option', 'Admin\AdminController@managePostOption');
+    Route::get('admin/manage/option/{option_id}', 'Admin\AdminController@jsonServiceOption');
 });
