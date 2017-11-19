@@ -12,13 +12,31 @@
                         <hr>
 
                         <h4>Inschrijvingen per Activiteit</h4>
-                        @foreach($activities as $activity)
-                            <div class="col-xs-12">
-                                <p class="col-xs-4">{{$activity->name}}:</p>
-                                <p class="col-xs-4">{{$activity->users()->count()}} van {{$activity->maxUsers}}
-                                    personen</p>
-                            </div>
-                        @endforeach
+
+                        <div class="panel-group col-xs-12" id="accordion222">
+
+                            @foreach($activities as $activity)
+
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h5 class="panel-title">
+                                            <a class="clearfix" data-toggle="collapse" data-parent="#accordionaccordion222" href="#collapse222{{$activity->id}}">
+                                                <div class="col-xs-4">{{$activity->name}}</div>
+                                                <div class="col-xs-8">({{$activity->users()->count()}}/{{$activity->maxUsers}})</div>
+                                            </a>
+                                        </h5>
+                                    </div>
+                                    <div id="collapse222{{$activity->id}}" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                            @foreach($activity->users as $user)
+                                                <p>{{$user->firstName}} {{$user->lastName}} ({{$user->email}})</p>
+                                            @endforeach
+                                        </div>
+                                    </div>
+                                </div>
+                            @endforeach
+
+                        </div>
 
                         <div class="clearfix"></div>
                         <hr>
@@ -30,21 +48,23 @@
                             </div>
                             <div class="clearfix"></div>
 
-                            <div class="panel-group col-xs-12" id="accordion">
+                            <div class="panel-group col-xs-12" id="accordion111{{$game->id}}">
 
                                 @foreach($game->teams as $team)
 
                                     <div class="panel panel-default">
                                         <div class="panel-heading">
                                             <h5 class="panel-title">
-                                                <a data-toggle="collapse" data-parent="#accordion"
-                                                   href="#collapse{{$game->id . $team->id}}">{{$team->name}} ({{$team->users->count()}}/{{$game->maxPlayers}})</a>
+                                                <a class="clearfix" data-toggle="collapse" data-parent="#accordionaccordion111{{$game->id}}" href="#collapse111{{$game->id . $team->id}}">
+                                                    <div class="col-xs-4">{{$team->name}}</div>
+                                                    <div class="col-xs-8">({{$team->users->count()}}/{{$game->maxPlayers}})</div>
+                                                </a>
                                             </h5>
                                         </div>
-                                        <div id="collapse{{$game->id . $team->id}}" class="panel-collapse collapse">
+                                        <div id="collapse111{{$game->id . $team->id}}" class="panel-collapse collapse">
                                             <div class="panel-body">
                                                 @foreach($team->users as $user)
-                                                    <p>{{$user->email}}</p>
+                                                    <p>{{$user->email}}{{ $team->leaderID == $user->id ? " (Captain)" : "" }}</p>
                                                 @endforeach
                                             </div>
                                         </div>
