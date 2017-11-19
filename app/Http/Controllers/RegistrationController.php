@@ -30,12 +30,16 @@ class RegistrationController extends Controller
     {
         if (Auth::check()) {
             $user = Auth::user();
+            $allActivities = Activity::orderBy('startDate','asc')->get();
+            $allOptions = Option::all();
 
             $activities = array();
             $options = array();
 
+
+
             if (!empty($user->activities())) {
-                $activities = $user->activities()->orderBy('name','asc')->get();
+                $activities = $user->activities()->orderBy('startDate','asc')->get();
             }
 
             if (!empty($user->options())) {
@@ -47,17 +51,17 @@ class RegistrationController extends Controller
                 $game = $team->game()->get()->first();
 
                 if ($game->isSingleplayer) {
-                    return view('registration.show')->with('user', $user)->with('activities', $activities)->with('options', $options)->with('team', $team)->with('game', $game);
+                    return view('registration.show')->with('user', $user)->with('activities', $activities)->with('options', $options)->with('team', $team)->with('game', $game)->with('allActivities', $allActivities)->with('allOptions', $allOptions);
                 } else {
                     $teamUsers = $team->users()->get();
                     $members = array();
                     foreach ($teamUsers as $teamUser) {
                         array_push($members, $teamUser);
                     }
-                    return view('registration.show')->with('user', $user)->with('activities', $activities)->with('options', $options)->with('team', $team)->with('game', $game)->with('members', $members);
+                    return view('registration.show')->with('user', $user)->with('activities', $activities)->with('options', $options)->with('team', $team)->with('game', $game)->with('members', $members)->with('allActivities', $allActivities)->with('allOptions', $allOptions);
                 }
             } else {
-                return view('registration.show')->with('user', $user)->with('activities', $activities)->with('options', $options);
+                return view('registration.show')->with('user', $user)->with('activities', $activities)->with('options', $options)->with('allActivities', $allActivities)->with('allOptions', $allOptions);
             }
         } else {
             // Make unauthorized page
@@ -68,7 +72,7 @@ class RegistrationController extends Controller
     public function create()
     {
         $activities = array();
-        $collection = Activity::orderBy('name','asc')->get();
+        $collection = Activity::orderBy('startDate','asc')->get();
         foreach ($collection as $ac) {
           if ($ac->users()->count() < $ac->maxUsers) {
             $activities[] = $ac;
@@ -92,7 +96,7 @@ class RegistrationController extends Controller
     public function createCasual()
     {
         $activities = array();
-        $collection = Activity::orderBy('name','asc')->get();
+        $collection = Activity::orderBy('startDate','asc')->get();
         foreach ($collection as $ac) {
           if ($ac->users()->count() < $ac->maxUsers) {
             $activities[] = $ac;
@@ -125,7 +129,7 @@ class RegistrationController extends Controller
         }
 
         $activities = array();
-        $collection = Activity::orderBy('name','asc')->get();
+        $collection = Activity::orderBy('startDate','asc')->get();
         foreach ($collection as $ac) {
           if ($ac->users()->count() < $ac->maxUsers) {
             $activities[] = $ac;
@@ -153,30 +157,86 @@ class RegistrationController extends Controller
         return $view->with('options', Option::all());
     }
 
-    public function edit()
+    public function editActivities(Request $request)
     {
         if (Auth::check()) {
             $user = Auth::user();
-
-            $activities = null;
-
-            if (!isEmpty($user->activities())) {
-                $activities = $user->activities()->orderBy('name','asc')->get();
-            }
-
-            if ($user->hasTeam) {
-                $team = $user->team()->get()->first();
-
-                return view('registration.show')->with('user', $user)->with('activities', $activities)->with('team', $team);
-            } else {
-                return view('registration.show')->with('user', $user)->with('activities', $activities);
-            }
+            $user->activities()->sync($request->input('activities') === null ? [] : $request->input('activities'));
         } else {
-            // Make unauthorized page
-            return view('errors.503');
+            return redirect("/login");
         }
-        return view('registration.edit');
+        return redirect("/show");
     }
+
+    public function editOptions(Request $request)
+    {
+        if (Auth::check()) {
+            $user = Auth::user();
+            $user->options()->sync($request->input('options') === null ? [] : $request->input('options'));
+        } else {
+            return redirect("/login");
+        }
+        return redirect("/show");
+    }
+    //poging tot games beschikbaar maken na inloggen
+/*    public function storeTeamExistingUser(RegisterTeamRequest $request)
+{
+    if (Auth::check()) {
+        $user = Auth::user();
+
+        $team = new Team();
+        $team->leaderID = $user->id;
+        $team->name = $request->input('teamname');
+        $team->gameID = $request->input('gameid');
+
+        $mailarr = array();
+        if($request->has('teammembers')){
+            $mailarr = $request->input('teammembers');
+        }
+
+        $gameTeamSize = Game::where('id', $team->gameID)->first()->maxPlayers;
+
+        //remove empty fields
+        $mailarr = array_filter($mailarr);
+
+        if ($gameTeamSize == count($mailarr)) {
+            // non public team
+            $team->isPublic = false;
+        } else {
+            // public team
+            $team->isPublic = true;
+        }
+        $savedTeam = $team->save();
+        if ($savedTeam) {
+            $pendingInvites = array();
+
+            for ($i = 0; $i < count($mailarr); $i++) {
+                $membermail = $mailarr[$i];
+                $inv = new PendingInvite();
+                $inv->email = $membermail;
+                $inv->teamID = $team->id;
+                $inv->token = str_replace('/', '_', Str::random(60));
+                array_push($pendingInvites, $inv);
+            }
+            foreach ($pendingInvites as $pendingInvite) {
+                if ($pendingInvite->save()) {
+                    $this->mailInvite($pendingInvite);
+                }
+            }
+            $team->users()->attach($user);
+            $this->mailConfirm($user);
+        } else {
+            $team->delete();
+            $user->delete();
+            return redirect()->back()->with('err', 'Kon het team niet opslaan.');
+        }
+
+        return redirect("/show");
+
+    } else {
+        return redirect("/login");
+    }
+}*/
 
     public function storeTeam(RegisterTeamRequest $request)
     {

@@ -49,8 +49,14 @@ Route::group(['middleware' => 'web'], function () {
   // Show user his info
   Route::get('show', 'RegistrationController@show');
 
-  // Show user edit screen
-  Route::get('edit', 'RegistrationController@edit');
+  // update activitites
+  Route::post('editActivities', 'RegistrationController@editActivities');
+
+  //update options
+  Route::post('editOptions', 'RegistrationController@editOptions');
+
+  Route::post('storeTeamExistingUser', 'RegistrationController@storeTeamExistingUser');
+
 
 
 });
