@@ -15,56 +15,69 @@ Route::get('/home', 'HomeController@index');
 
 Route::group(['middleware' => 'web'], function () {
 
-  Route::get('/', 'RegistrationController@index');
+    // Show index
+    Route::get('/', 'RegistrationController@index');
 
-  Route::get('/home', 'RegistrationController@show')->name('home');
+    // Show user his info
+    Route::get('show', 'RegistrationController@show');
+    Route::get('/home', 'RegistrationController@show')->name('home');
 
-  Route::get('/get/teams/{gameid}','RegistrationController@ajaxTeams');
+    // Show user edit screen
+    Route::get('edit', 'RegistrationController@edit');
 
-  // Display form to register Casual
-  Route::get('registercasual', 'RegistrationController@createCasual');
+    // Display form to register Casual
+    Route::get('registercasual', 'RegistrationController@createCasual');
+    // Display form to register Public
+    Route::get('registerteam', 'RegistrationController@createPublic');
+    // Display form to register
+    Route::get('register', 'RegistrationController@create');
 
-  // Display form to register Public
-  Route::get('registerteam', 'RegistrationController@createPublic');
+    // Store a new Casual
+    Route::post('storecasual', 'RegistrationController@storeCasual');
+    // Store a new Public
+    Route::post('registerpublic', 'RegistrationController@storePublicTeam');
+    // Store a new Mail invited
+    Route::post('registermail', 'RegistrationController@storeMailInvite');
+    // Store a new Team
+    Route::post('storeteam', 'RegistrationController@storeTeam');
 
-  // Display form to register
-  Route::get('register', 'RegistrationController@create');
+    // Mailing handlers
+    Route::get('invite/{token}', 'RegistrationController@createMailInvite');
+    Route::get('confirmation/{token}', 'RegistrationController@userConfirmation');
+  
+    // update activitites
+    Route::post('editActivities', 'RegistrationController@editActivities');
 
-  // Store a new Casual
-  Route::post('storecasual', 'RegistrationController@storeCasual');
+    //update options
+    Route::post('editOptions', 'RegistrationController@editOptions');
 
-  // Store a new Public
-  Route::post('registerpublic', 'RegistrationController@storePublicTeam');
-
-  // Store a new Mail invited
-  Route::post('registermail', 'RegistrationController@storeMailInvite');
-
-  // Store a new Team
-  Route::post('storeteam', 'RegistrationController@storeTeam');
-
-  Route::get('invite/{token}','RegistrationController@createMailInvite');
-
-  Route::get('confirmation/{token}','RegistrationController@userConfirmation');
-
-  // Show user his info
-  Route::get('show', 'RegistrationController@show');
-
-  // update activitites
-  Route::post('editActivities', 'RegistrationController@editActivities');
-
-  //update options
-  Route::post('editOptions', 'RegistrationController@editOptions');
-
-  Route::post('storeTeamExistingUser', 'RegistrationController@storeTeamExistingUser');
-
-
-
+    Route::post('storeTeamExistingUser', 'RegistrationController@storeTeamExistingUser');
 });
 
+// Admin panel
 Route::group(['middleware' => ['auth', 'admin']], function () {
+
+    // Menu (home)
     Route::get('admin', 'Admin\AdminController@index');
+
+    // Show statistics
     Route::get('admin/statistics', 'Admin\AdminController@statistics');
+  
+    // Menu (manage)
     Route::get('admin/manage', 'Admin\AdminController@manage');
-    Route::post('admin/manage', 'Admin\AdminController@managePost');
-    Route::get('admin/manage/{activity_id}', 'Admin\AdminController@jsonService');
+
+    // Edit or create activity
+    Route::get('admin/manage/activity', 'Admin\AdminController@manageActivity');
+    Route::post('admin/manage/activity', 'Admin\AdminController@managePostActivity');
+    Route::get('admin/manage/activity/{activity_id}', 'Admin\AdminController@jsonServiceActivity');
+
+    // Edit or create game
+    Route::get('admin/manage/game', 'Admin\AdminController@manageGame');
+    Route::post('admin/manage/game', 'Admin\AdminController@managePostGame');
+    Route::get('admin/manage/game/{game_id}', 'Admin\AdminController@jsonServiceGame');
+
+    // Edit or create option
+    Route::get('admin/manage/option', 'Admin\AdminController@manageOption');
+    Route::post('admin/manage/option', 'Admin\AdminController@managePostOption');
+    Route::get('admin/manage/option/{option_id}', 'Admin\AdminController@jsonServiceOption');
 });
