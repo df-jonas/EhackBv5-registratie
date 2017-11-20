@@ -5,7 +5,9 @@
 @stop
 
 @section('content')
-
+    <div class="alert alert-warning">
+        <p><b>Opgelet!</b> Na inschrijving is het niet meer mogelijk om je te registeren voor games!</p>
+    </div>
     @if(Session::has('err'))
     <div class="alert alert-danger">
         {{ Session::get('err') }}
@@ -95,7 +97,7 @@
           <h3 class="h3left">Keynotes</h3>
           @foreach($talks as $talk)
             <div class="checkbox">
-              <label><input type="checkbox" name="activities[]"value="{{$talk->id}}">{{$talk->name}}
+              <label><input type="checkbox" name="activities[]"value="{{$talk->id}}" {{  ($talk->maxUsers - $talk->users->count()) <= 0 ? 'disabled' : '' }}>{{$talk->name}} ({{date("H:i",strtotime($talk->startDate)) }}u-{{date("H:i",strtotime($talk->endDate))}}u)
                 @if($talk->maxUsers != 9999) - Plaatsen: {{ $talk->maxUsers - $talk->users->count() }} @endif
               </label>
             </div>
@@ -104,7 +106,7 @@
           <h3 class="h3left">Workshops</h3>
           @foreach($workshops as $workshop)
             <div class="checkbox">
-              <label><input type="checkbox" name="activities[]"value="{{$workshop->id}}">{{$workshop->name}}
+              <label><input type="checkbox" name="activities[]"value="{{$workshop->id}}" {{  ($workshop->maxUsers - $workshop->users->count()) <= 0 ? 'disabled' : '' }}>{{$workshop->name}} ({{date("H:i",strtotime($workshop->startDate)) }}u-{{date("H:i",strtotime($workshop->endDate))}}u)
                 @if($workshop->maxUsers != 9999) - Plaatsen: {{ $workshop->maxUsers - $workshop->users->count() }} @endif
               </label>
             </div>
