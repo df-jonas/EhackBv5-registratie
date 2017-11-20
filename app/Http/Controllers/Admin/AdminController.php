@@ -239,10 +239,11 @@ class AdminController extends Controller
                         $a->name = $request->name;
                         $a->price = $request->price;
 
-                        if (isset($request->hasPrice) || $request->price != 0) {
+                        if (isset($request->hasPrice)) {
                             $a->hasPrice = 1;
                         } else {
                             $a->hasPrice = 0;
+                            $a->price = 0;
                         }
 
                         $a->save();
@@ -262,10 +263,11 @@ class AdminController extends Controller
                         $a->name = $request->name;
                         $a->price = $request->price;
 
-                        if (isset($request->hasPrice) || $request->price != 0) {
+                        if (isset($request->hasPrice)) {
                             $a->hasPrice = 1;
                         } else {
                             $a->hasPrice = 0;
+                            $a->price = 0;
                         }
 
                         $a->save();

@@ -31,7 +31,7 @@
 
                             <div class="form-group col-md-4">
                                 <label for="newoption_price">Prijs</label>
-                                <input type="number" id="newoption_price" class="form-control" name="price" value="5"
+                                <input type="number" id="newoption_price" step="0.01" min="0" class="form-control" name="price" value="5"
                                        autocomplete="off" required>
                             </div>
 
@@ -54,7 +54,7 @@
                         <div class="clearfix"></div>
                         <hr>
 
-                        <h4>Bewerk game</h4>
+                        <h4>Bewerk optie</h4>
                         <form method="POST" class="form">
 
                             {{ csrf_field() }}
@@ -79,7 +79,7 @@
 
                             <div class="form-group col-md-4">
                                 <label for="editoption_price">Prijs</label>
-                                <input type="number" id="editoption_price" class="form-control" name="price" value="5"
+                                <input type="number" id="editoption_price" step="0.01" min="0" class="form-control" name="price" value="5"
                                        autocomplete="off" required>
                             </div>
 
