@@ -44,6 +44,14 @@ Route::group(['middleware' => 'web'], function () {
     // Mailing handlers
     Route::get('invite/{token}', 'RegistrationController@createMailInvite');
     Route::get('confirmation/{token}', 'RegistrationController@userConfirmation');
+  
+    // update activitites
+    Route::post('editActivities', 'RegistrationController@editActivities');
+
+    //update options
+    Route::post('editOptions', 'RegistrationController@editOptions');
+
+    Route::post('storeTeamExistingUser', 'RegistrationController@storeTeamExistingUser');
 });
 
 // Admin panel
@@ -54,7 +62,7 @@ Route::group(['middleware' => ['auth', 'admin']], function () {
 
     // Show statistics
     Route::get('admin/statistics', 'Admin\AdminController@statistics');
-
+  
     // Menu (manage)
     Route::get('admin/manage', 'Admin\AdminController@manage');
 
