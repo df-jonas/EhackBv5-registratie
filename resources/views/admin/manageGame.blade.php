@@ -32,13 +32,13 @@
                             <div class="form-group col-md-6">
                                 <label for="newgame_maxpersons">Aantal personen per team</label>
                                 <input type="number" id="newgame_maxpersons" class="form-control" name="maxpersons"
-                                       value="5" autocomplete="off" required>
+                                       min="0" value="5" autocomplete="off" required>
                             </div>
 
                             <div class="form-group col-md-6">
                                 <label for="newgame_maxteams">Maximum aantal teams</label>
                                 <input type="number" id="newgame_maxteams" class="form-control" name="maxteams"
-                                       value="15" autocomplete="off" required>
+                                       min="0" value="15" autocomplete="off" required>
                             </div>
 
 
@@ -87,13 +87,13 @@
                             <div class="form-group col-md-6">
                                 <label for="editgame_maxpersons">Aantal personen per team</label>
                                 <input type="number" id="editgame_maxpersons" class="form-control" name="maxpersons"
-                                       value="5" autocomplete="off" required>
+                                       min="0" value="5" autocomplete="off" required>
                             </div>
 
                             <div class="form-group col-md-6">
                                 <label for="editgame_maxteams">Maximum aantal teams</label>
                                 <input type="number" id="editgame_maxteams" class="form-control" name="maxteams"
-                                       value="15" autocomplete="off" required>
+                                       min="0" value="15" autocomplete="off" required>
                             </div>
 
 

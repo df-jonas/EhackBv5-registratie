@@ -32,7 +32,7 @@
                             <div class="form-group col-md-4">
                                 <label for="newactivity_maxpersons">Maximum aantal personen</label>
                                 <input type="number" id="newactivity_maxpersons" class="form-control"
-                                       name="maxpersons"
+                                       name="maxpersons" min="0"
                                        value="60" autocomplete="off" required>
                             </div>
 
@@ -87,7 +87,7 @@
                             <div class="form-group col-md-4">
                                 <label for="editactivity_maxpersons">Maximum aantal personen</label>
                                 <input type="number" id="editactivity_maxpersons" class="form-control"
-                                       name="maxpersons"
+                                       name="maxpersons" min="0"
                                        value="60" autocomplete="off" required>
                             </div>
 
