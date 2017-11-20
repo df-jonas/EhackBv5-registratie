@@ -62,6 +62,7 @@ class AdminController extends Controller
 
         return view('admin.manageActivity', $variables);
     }
+
     public function managePostActivity(Request $request)
     {
         $error = 1;
@@ -71,7 +72,8 @@ class AdminController extends Controller
             switch ($request->formtype) {
                 case "newactivity":
                     if (isset($request->name) && isset($request->maxpersons) && isset($request->groupid) && isset($request->desc)
-                        && $request->name != "" && $request->maxpersons > 0 && ActivityGroup::find($request->groupid) != null) {
+                        && $request->name != "" && $request->maxpersons > 0 && $request->maxpersons <= 2147483647
+                        && ActivityGroup::find($request->groupid) != null && strlen($request->name) < 191) {
 
                         $a = new Activity();
 
@@ -89,8 +91,9 @@ class AdminController extends Controller
                     break;
 
                 case "editactivity":
-                    if (isset($request->id) && isset($request->name) && isset($request->maxpersons) && isset($request->groupid) && isset($request->desc)
-                        && Activity::find($request->id) != null && $request->name != "" && $request->maxpersons > 0 && ActivityGroup::find($request->groupid) != null) {
+                    if (isset($request->id) && isset($request->name) && isset($request->maxpersons) && isset($request->groupid)
+                        && isset($request->desc) && Activity::find($request->id) != null && $request->name != "" && $request->maxpersons > 0
+                        && $request->maxpersons <= 2147483647 && ActivityGroup::find($request->groupid) != null && strlen($request->name) < 191) {
 
                         $a = Activity::find($request->id);
 
@@ -115,6 +118,7 @@ class AdminController extends Controller
 
         return $this->manageActivity($error);
     }
+
     public function jsonServiceActivity($activity_id)
     {
         $a = Activity::find($activity_id);
@@ -138,6 +142,7 @@ class AdminController extends Controller
 
         return view('admin.manageGame', $variables);
     }
+
     public function managePostGame(Request $request)
     {
         $error = 1;
@@ -147,7 +152,8 @@ class AdminController extends Controller
             switch ($request->formtype) {
                 case "newgame":
                     if (isset($request->name) && isset($request->maxpersons) && isset($request->maxteams)
-                        && $request->name != "" && $request->maxpersons > 0 && $request->maxteams > 0) {
+                        && $request->name != "" && $request->maxpersons > 0 && $request->maxteams > 0
+                        && $request->maxpersons < 2147483647 && $request->maxteams < 2147483647 && strlen($request->name) < 191) {
 
                         $a = new Game();
 
@@ -171,7 +177,8 @@ class AdminController extends Controller
 
                 case "editgame":
                     if (isset($request->id) && isset($request->name) && isset($request->maxpersons) && isset($request->maxteams)
-                        && Game::find($request->id) != null && $request->name != "" && $request->maxpersons > 0 && $request->maxteams > 0) {
+                        && Game::find($request->id) != null && $request->name != "" && $request->maxpersons > 0 && $request->maxteams > 0
+                        && $request->maxpersons < 2147483647 && $request->maxteams < 2147483647 && strlen($request->name) < 191) {
 
                         $a = Game::find($request->id);
 
@@ -201,6 +208,7 @@ class AdminController extends Controller
 
         return $this->manageGame($error);
     }
+
     public function jsonServiceGame($game_id)
     {
         $a = Game::find($game_id);
@@ -224,6 +232,7 @@ class AdminController extends Controller
 
         return view('admin.manageOption', $variables);
     }
+
     public function managePostOption(Request $request)
     {
         $error = 1;
@@ -232,7 +241,8 @@ class AdminController extends Controller
 
             switch ($request->formtype) {
                 case "newoption":
-                    if (isset($request->name) && isset($request->price) && $request->name != "" && $request->price >= 0) {
+                    if (isset($request->name) && isset($request->price) && $request->name != "" && $request->price >= 0
+                        && strlen($request->name) < 191) {
 
                         $a = new Option();
 
@@ -255,8 +265,8 @@ class AdminController extends Controller
                     break;
 
                 case "editoption":
-                    if (isset($request->id) && isset($request->name) && isset($request->price)
-                        && Option::find($request->id) != null && $request->name != "" && $request->price >= 0) {
+                    if (isset($request->id) && isset($request->name) && isset($request->price) && Option::find($request->id) != null
+                        && $request->name != "" && $request->price >= 0 && strlen($request->name) < 191) {
 
                         $a = Option::find($request->id);
 
@@ -286,6 +296,7 @@ class AdminController extends Controller
 
         return $this->manageOption($error);
     }
+
     public function jsonServiceOption($option_id)
     {
         $a = Option::find($option_id);
