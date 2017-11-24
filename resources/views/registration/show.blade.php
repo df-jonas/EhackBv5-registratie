@@ -9,12 +9,26 @@
   <div class="line"></div>
   <div class="col-md-6">
     <ul class="list-unstyled">
+
       <li class="list-group-item"><b>Voornaam: </b>{{ $user->firstName }}</li>
       <li class="list-group-item"><b>Achternaam: </b>{{ $user->lastName }}</li>
       <li class="list-group-item"><b>E-mailadres: </b>{{ $user->email }}</li>
+
       @if(!empty($user->reminderMail))
         <li class="list-group-item"><b>Reminder E-mailadres: </b>{{ $user->reminderMail }}</li>
       @endif
+        <form method="POST" action="editSteamID">
+            {{ csrf_field() }}
+            <li class="list-group-item"><b>SteamID: </b>
+                <input type="text" name="steamid" id="steamid" required value="{{ $user->steamid }}"/>
+                <button style="margin-left:5px;" id="editSteamID" name="submitbutton" type="submit" class="btn btn-primary">Wijzig SteamID</button>
+
+            </li>
+
+        </form>
+
+
+
     </ul>
 
 
@@ -29,7 +43,7 @@
                   </label>
               </div>
           @endforeach
-          <button id="submitbutton" name="submitbtton" type="submit" class="btn btn-primary">Activitieten opslaan</button>
+          <button id="submitbutton" name="submitbtton" type="submit" class="btn btn-primary">Activiteiten opslaan</button>
       </form>
 
       <h2>Wijzig opties</h2>
