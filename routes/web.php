@@ -32,8 +32,12 @@ Route::group(['middleware' => 'web'], function () {
     // Display form to register
     Route::get('register', 'RegistrationController@create');
 
+    //Display new form
+    Route::get('new', 'RegistrationController@new');
+
     // Store a new Casual
     Route::post('storecasual', 'RegistrationController@storeCasual');
+
     // Store a new Public
     Route::post('registerpublic', 'RegistrationController@storePublicTeam');
     // Store a new Mail invited

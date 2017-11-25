@@ -1,70 +1,84 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>EhackB</title>
-        @yield ('head')
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-        <link rel="stylesheet" href="/css/style.css">
-    </head>
+<head>
+    <meta charset="utf-8">
 
-    <body>
-        <div class="col-md-10 col-md-offset-1">
-            <div class="group ehackbg container-fluid">
-                <nav class="navbar navbar-static-top">
-                    <div class="container-fluid">
-                            <ul class="nav navbar-nav">
-                              <li class="nav-item">
-                                  <a class="nav-link" href="{{ url('/') }}">Home</a>
-                              </li>
-                            @if (Auth::guest())
-                                <li class="dropdown">
-                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Registreren
-                                        <span class="caret"></span></a>
-                                    <ul class="dropdown-menu">
-                                        <li><a class="nav-link" href="{{url('registercasual')}}">Gewoon registreren</a></li>
-                                        <li><a class="nav-link" href="{{url('register')}}">Maak een team</a></li>
-                                        <li><a class="nav-link" href="{{url('registerteam')}}">Ga bij een publiek team</a></li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ url('login') }}">Inloggen</a>
-                                </li>
-                            @else
-                                <li class="dropdown">
-                                    <a class="dropdown-toggle" data-toggle="dropdown" role="button" href="#">
-                                        {{ Auth::user()->firstName. " ".Auth::user()->lastName }} <span class="caret"></span>
-                                    </a>
+    @yield ('title')
 
-                                    <ul class="dropdown-menu" role="menu">
-                                        <li>
-                                            <a href="{{ url('show') }}">
-                                                Toon profiel
-                                            </a>
-                                            <a href="{{ url('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                                                Logout
-                                            </a>
+    <title>EhackB - Registratie</title>
 
-                                            <form id="logout-form" action="{{ url('logout') }}" method="POST" style="display: none;">
-                                                {{ csrf_field() }}
-                                            </form>
-                                        </li>
-                                    </ul>
-                                </li>
-                            @endif
-                            </ul>
-                        {{--</div>--}}
-                    </div>
-                </nav>
-                <div class="text-center">
-                    <a href="{{url('/')}}"><img src="/img/logo.png" alt="logo" id="logo"></a>
-                </div>
-                
-                @yield ('content')
-            </div>
+    <!--Favicon-->
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ URL::to('img/favicons/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ URL::to('img/favicons/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ URL::to('img/favicons/favicon-16x16.png') }}">
+    <link rel="manifest" href="{{ URL::to('img/favicons/manifest.json') }}">
+    <link rel="mask-icon" href="{{ URL::to('img/favicons/safari-pinned-tab.svg') }}" color="#0d0d35">
+    <meta name="apple-mobile-web-app-title" content="EHackB5">
+    <meta name="application-name" content="EHackB5">
+    <meta name="theme-color" content="#0d0d35">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+          integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ URL::to('css/register.css') }}">
+
+</head>
+
+<body>
+
+<!-- HEADER  -->
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="{{ url('/') }}">
+            <img src="{{ URL::to('img/logo5.svg') }}" width="30" height="30" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ml-auto">
+                @if (Auth::guest())
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('new') }}">Registreren</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('login') }}">Inloggen</a>
+                    </li>
+                @else
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                           aria-haspopup="true" aria-expanded="false">
+                            {{ Auth::user()->firstName. " ".Auth::user()->lastName }} <span class="caret"></span>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="{{ url('logout') }}"
+                               onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Uitloggen</a>
+                        </div>
+                        <form id="logout-form" action="{{ url('logout') }}" method="POST" style="display: none;">
+                            {{ csrf_field() }}
+                        </form>
+                    </li>
+                @endif
+            </ul>
         </div>
-        <script type="text/javascript" src="{{ asset('js/jquery.min.js') }}"></script>
-        @yield ('scripts')
-        <script src="/js/app.js"></script>
-    </body>
+    </nav>
+</header>
+
+<!-- MAIN -->
+
+<main>
+    @yield ('content')
+</main>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
+        integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
+        integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+        crossorigin="anonymous"></script>
+<script src="{{ URL::to('js/register.js') }}"></script>
+
+</body>
 </html>

@@ -69,6 +69,45 @@ class RegistrationController extends Controller
         }
     }
 
+    public function new(){
+        $games = Game::orderBy('name')->where('maxPlayers', '>', 1)->get();
+        $teams;
+        $collection2 = Team::where('gameID', $games[0]->id)->where('isPublic', '1')->get();
+        foreach ($collection2 as $t) {
+            if (($t->game->maxPlayers - $t->invites()->count() - $t->users()->count()) > 0) {
+                $teams[] = $t;
+            }
+        }
+
+        $activities = array();
+        $collection = Activity::orderBy('startDate','asc')->get();
+        foreach ($collection as $ac) {
+            if ($ac->users()->count() < $ac->maxUsers) {
+                $activities[] = $ac;
+            }
+        }
+
+        $talks = array();
+        $workshops = array();
+
+        foreach ($collection as $activity) {
+            if ($activity->activityGroupID == 1) {
+                array_push($talks, $activity);
+            } else {
+                array_push($workshops, $activity);
+            }
+        }
+
+        $view = view('registration.new')->with('games', $games);
+        if (!empty($teams)) {
+            $view->with('teams', collect($teams));
+        }
+
+        $view->with('talks', $talks)->with('workshops', $workshops);
+
+        return $view->with('options', Option::all());
+    }
+
     public function create()
     {
         $activities = array();
@@ -178,6 +217,21 @@ class RegistrationController extends Controller
         }
         return redirect("/show");
     }
+
+    public function editSteamID(Request $request)
+    {
+        if (Auth::check()) {
+            $user = Auth::user();
+            $user->steamid = $request->input("steamid");
+            $user->save(); //update SteamID
+        }
+        else {
+            return redirect("/login");
+        }
+        return redirect("/show");
+    }
+
+
     //poging tot games beschikbaar maken na inloggen
 /*    public function storeTeamExistingUser(RegisterTeamRequest $request)
 {
@@ -245,6 +299,7 @@ class RegistrationController extends Controller
         $user->email = $request->input('email');
         $user->firstname = $request->input('firstname');
         $user->lastname = $request->input('lastname');
+        $user->steamid = $request->input("steamid");
         $user->password = Hash::make($request->input('password'));
         $user->reminderMail = $request->input('reminderemail');
         $user->confirmationToken = str_replace('/', '_', Str::random(60));
@@ -406,6 +461,7 @@ class RegistrationController extends Controller
         $user->reminderMail = $request->input('reminderemail');
         $user->firstname = $request->input('firstname');
         $user->lastname = $request->input('lastname');
+        $user->steamid = $request->input("steamid");
         $user->password = Hash::make($request->input('password'));
         $user->confirmationToken = str_replace('/', '_', Str::random(60));
         $savedUser = $user->save(); // create user
@@ -456,6 +512,7 @@ class RegistrationController extends Controller
         $user->reminderMail = $request->input('reminderemail');
         $user->firstname = $request->input('firstname');
         $user->lastname = $request->input('lastname');
+        $user->steamid = $request->input("steamid");
         $user->password = Hash::make($request->input('password'));
         $user->confirmationToken = str_replace('/', '_', Str::random(60));
         $savedUser = $user->save(); // create user
