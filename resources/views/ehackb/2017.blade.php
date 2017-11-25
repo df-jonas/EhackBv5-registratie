@@ -154,7 +154,7 @@
                             <h4 class="card-title">Sebastien Deleersnyder (Toreon)</h4>
                             <h6 class="card-subtitle mb-2 text-muted">Whiteboard Hacking aka Hands-on Threat Modeling</h6>
                             <!--<p class="card-text"></p>-->
-                            <a href="" id="barracuda" class="card-link showOverlay">Meer info...</a>
+                            <a href="" id="toreon1" class="card-link showOverlay">Meer info...</a>
                         </div>
                         <div class="card-footer">
                             <small class="text-muted">17:15 - 18:15 / NL</small>
@@ -166,7 +166,7 @@
                             <h4 class="card-title">Rutger Truyers (Checkpoint)</h4>
                             <h6 class="card-subtitle mb-2 text-muted">ZERO-Day prevention</h6>
                             <!--<p class="card-text"></p>-->
-                            <a href="" id="guardsquare" class="card-link showOverlay">Meer info...</a>
+                            <a href="" id="checkpoint" class="card-link showOverlay">Meer info...</a>
                         </div>
                         <div class="card-footer">
                             <small class="text-muted">17:15 - 18:15 / NL</small>
@@ -178,22 +178,10 @@
                     <div class="card">
                         <img class="card-img-top" src="img/card.jpg" alt="Card image cap">
                         <div class="card-body">
-                            <h4 class="card-title">Sebastien Deleersnyder (Toreon)</h4>
-                            <h6 class="card-subtitle mb-2 text-muted">STRIDE analysis of an B2B web and mobile applications, sharing the same REST backend (hands-on)</h6>
-                            <!--<p class="card-text"></p>-->
-                            <a href="" id="userfull" class="card-link showOverlay">Meer info...</a>
-                        </div>
-                        <div class="card-footer">
-                            <small class="text-muted">18:15 - 19:15 / NL</small>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img class="card-img-top" src="img/card.jpg" alt="Card image cap">
-                        <div class="card-body">
                             <h4 class="card-title">Dirk Van Welden</h4>
                             <h6 class="card-subtitle mb-2 text-muted">Game development </h6>
                             <!--<p class="card-text"></p>-->
-                            <a href="" id="barracuda" class="card-link showOverlay">Meer info...</a>
+                            <a href="" id="welden" class="card-link showOverlay">Meer info...</a>
                         </div>
                         <div class="card-footer">
                             <small class="text-muted">18:15 - 19:15 / NL</small>
@@ -202,10 +190,10 @@
                     <div class="card">
                         <img class="card-img-top" src="img/card.jpg" alt="Card image cap">
                         <div class="card-body">
-                            <h4 class="card-title">Erik Vanderhasselt</h4>
-                            <h6 class="card-subtitle mb-2 text-muted">Analyzing network traffic (hands-on)</h6>
+                            <h4 class="card-title">Frederik De Ryck (Accenture)</h4>
+                            <h6 class="card-subtitle mb-2 text-muted">TBA</h6>
                             <!--<p class="card-text"></p>-->
-                            <a href="" id="guardsquare" class="card-link showOverlay">Meer info...</a>
+                            <a href="" id="accenture" class="card-link showOverlay">Meer info...</a>
                         </div>
                         <div class="card-footer">
                             <small class="text-muted">19:30 - 20:30 / NL</small>
@@ -220,10 +208,10 @@
                     <div class="card">
                         <img class="card-img-top" src="img/card.jpg" alt="Card image cap">
                         <div class="card-body">
-                            <h4 class="card-title">Wireshark</h4>
-                            <h6 class="card-subtitle mb-2 text-muted">From packet zero to packet hero </h6>
+                            <h4 class="card-title">Erik Vanderhasselt (Wireshark)</h4>
+                            <h6 class="card-subtitle mb-2 text-muted">Analyzing network traffic (hands-on)</h6>
                             <!--<p class="card-text"></p>-->
-                            <a href="" id="userfull" class="card-link showOverlay">Meer info...</a>
+                            <a href="" id="wireshark" class="card-link showOverlay">Meer info...</a>
                         </div>
                         <div class="card-footer">
                             <small class="text-muted">15:00 - 16:00 / NL</small>
@@ -232,25 +220,13 @@
                     <div class="card">
                         <img class="card-img-top" src="img/card.jpg" alt="Card image cap">
                         <div class="card-body">
-                            <h4 class="card-title">Philippe Michiels &amp; Johan van Gestel (Barracuda)</h4>
-                            <h6 class="card-subtitle mb-2 text-muted">Security &amp; Networking in the Cloud Generation</h6>
+                            <h4 class="card-title">Sebastien Deleersnyder (Toreon)</h4>
+                            <h6 class="card-subtitle mb-2 text-muted">STRIDE analysis of an B2B web and mobile applications, sharing the same REST backend (hands-on)</h6>
                             <!--<p class="card-text"></p>-->
-                            <a href="" id="barracuda" class="card-link showOverlay">Meer info...</a>
+                            <a href="" id="toreon2" class="card-link showOverlay">Meer info...</a>
                         </div>
                         <div class="card-footer">
-                            <small class="text-muted">Audi 1 / 15:00 - 16:00 / NL</small>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img class="card-img-top" src="img/programma/ira.jpg" alt="Irasara Senarathne">
-                        <div class="card-body">
-                            <h4 class="card-title">Irasara Senarathne (Guardsquare)</h4>
-                            <h6 class="card-subtitle mb-2 text-muted">Mobile application protection &amp; reverse engineering</h6>
-                            <!--<p class="card-text"></p>-->
-                            <a href="" id="guardsquare" class="card-link showOverlay">Meer info...</a>
-                        </div>
-                        <div class="card-footer">
-                            <small class="text-muted">Audi 1 / 16:00 - 17:00 / EN</small>
+                            <small class="text-muted">18:15 - 19:15 / NL</small>
                         </div>
                     </div>
                 </div>
