@@ -102,7 +102,7 @@
                         <div class="card-body">
                             <h4 class="card-title">Bart Keybergh (Userfull)</h4>
                             <h6 class="card-subtitle mb-2 text-muted">Internet Of Things</h6>
-                            <p class="card-text"></p>
+                            <!--<p class="card-text"></p>-->
                             <a href="" id="userfull" class="card-link showOverlay">Meer info...</a>
                         </div>
                         <div class="card-footer">
@@ -114,7 +114,7 @@
                         <div class="card-body">
                             <h4 class="card-title">Philippe Michiels &amp; Johan van Gestel (Barracuda)</h4>
                             <h6 class="card-subtitle mb-2 text-muted">Security &amp; Networking in the Cloud Generation</h6>
-                            <p class="card-text"></p>
+                            <!--<p class="card-text"></p>-->
                             <a href="" id="barracuda" class="card-link showOverlay">Meer info...</a>
                         </div>
                         <div class="card-footer">
@@ -126,7 +126,7 @@
                         <div class="card-body">
                             <h4 class="card-title">Irasara Senarathne (Guardsquare)</h4>
                             <h6 class="card-subtitle mb-2 text-muted">Mobile application protection &amp; reverse engineering</h6>
-                            <p class="card-text"></p>
+                            <!--<p class="card-text"></p>-->
                             <a href="" id="guardsquare" class="card-link showOverlay">Meer info...</a>
                         </div>
                         <div class="card-footer">
@@ -141,7 +141,7 @@
                         <div class="card-body">
                             <h4 class="card-title">Koen Vanhees (Cegeka)</h4>
                             <h6 class="card-subtitle mb-2 text-muted">Een Security Operation Center – voorbeelden ‘from the field’</h6>
-                            <p class="card-text"></p>
+                            <!--<p class="card-text"></p>-->
                             <a href="" id="cegeka" class="card-link showOverlay">Meer info...</a>
                         </div>
                         <div class="card-footer">
@@ -153,7 +153,7 @@
                         <div class="card-body">
                             <h4 class="card-title">Sebastien Deleersnyder (Toreon)</h4>
                             <h6 class="card-subtitle mb-2 text-muted">Whiteboard Hacking aka Hands-on Threat Modeling</h6>
-                            <p class="card-text"></p>
+                            <!--<p class="card-text"></p>-->
                             <a href="" id="barracuda" class="card-link showOverlay">Meer info...</a>
                         </div>
                         <div class="card-footer">
@@ -165,7 +165,7 @@
                         <div class="card-body">
                             <h4 class="card-title">Rutger Truyers (Checkpoint)</h4>
                             <h6 class="card-subtitle mb-2 text-muted">ZERO-Day prevention</h6>
-                            <p class="card-text"></p>
+                            <!--<p class="card-text"></p>-->
                             <a href="" id="guardsquare" class="card-link showOverlay">Meer info...</a>
                         </div>
                         <div class="card-footer">
@@ -180,7 +180,7 @@
                         <div class="card-body">
                             <h4 class="card-title">Sebastien Deleersnyder (Toreon)</h4>
                             <h6 class="card-subtitle mb-2 text-muted">STRIDE analysis of an B2B web and mobile applications, sharing the same REST backend (hands-on)</h6>
-                            <p class="card-text"></p>
+                            <!--<p class="card-text"></p>-->
                             <a href="" id="userfull" class="card-link showOverlay">Meer info...</a>
                         </div>
                         <div class="card-footer">
@@ -192,7 +192,7 @@
                         <div class="card-body">
                             <h4 class="card-title">Dirk Van Welden</h4>
                             <h6 class="card-subtitle mb-2 text-muted">Game development </h6>
-                            <p class="card-text"></p>
+                            <!--<p class="card-text"></p>-->
                             <a href="" id="barracuda" class="card-link showOverlay">Meer info...</a>
                         </div>
                         <div class="card-footer">
@@ -204,7 +204,7 @@
                         <div class="card-body">
                             <h4 class="card-title">Erik Vanderhasselt</h4>
                             <h6 class="card-subtitle mb-2 text-muted">Analyzing network traffic (hands-on)</h6>
-                            <p class="card-text"></p>
+                            <!--<p class="card-text"></p>-->
                             <a href="" id="guardsquare" class="card-link showOverlay">Meer info...</a>
                         </div>
                         <div class="card-footer">
@@ -222,7 +222,7 @@
                         <div class="card-body">
                             <h4 class="card-title">Wireshark</h4>
                             <h6 class="card-subtitle mb-2 text-muted">From packet zero to packet hero </h6>
-                            <p class="card-text"></p>
+                            <!--<p class="card-text"></p>-->
                             <a href="" id="userfull" class="card-link showOverlay">Meer info...</a>
                         </div>
                         <div class="card-footer">
@@ -234,7 +234,7 @@
                         <div class="card-body">
                             <h4 class="card-title">Philippe Michiels &amp; Johan van Gestel (Barracuda)</h4>
                             <h6 class="card-subtitle mb-2 text-muted">Security &amp; Networking in the Cloud Generation</h6>
-                            <p class="card-text"></p>
+                            <!--<p class="card-text"></p>-->
                             <a href="" id="barracuda" class="card-link showOverlay">Meer info...</a>
                         </div>
                         <div class="card-footer">
@@ -246,7 +246,7 @@
                         <div class="card-body">
                             <h4 class="card-title">Irasara Senarathne (Guardsquare)</h4>
                             <h6 class="card-subtitle mb-2 text-muted">Mobile application protection &amp; reverse engineering</h6>
-                            <p class="card-text"></p>
+                            <!--<p class="card-text"></p>-->
                             <a href="" id="guardsquare" class="card-link showOverlay">Meer info...</a>
                         </div>
                         <div class="card-footer">
