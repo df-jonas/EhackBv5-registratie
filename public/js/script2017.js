@@ -14,8 +14,36 @@ function overlays() {
         event.preventDefault();
 
         if ($(this).attr("id") == "userfull") {
-            $("#overlay .title").html("Audi 1");
-            $("#overlay .text").html("Test");
+            $("#overlay .title").html("TBA");
+            $("#overlay .text").html("");
+        }
+        if ($(this).attr("id") == "ctf") {
+            $("#overlay .title").html("TBA");
+            $("#overlay .text").html("");
+        }
+        if ($(this).attr("id") == "checkpoint") {
+            $("#overlay .title").html("TBA");
+            $("#overlay .text").html("");
+        }
+        if ($(this).attr("id") == "welden") {
+            $("#overlay .title").html("TBA");
+            $("#overlay .text").html("");
+        }
+        if ($(this).attr("id") == "accenture") {
+            $("#overlay .title").html("TBA");
+            $("#overlay .text").html("");
+        }
+        if ($(this).attr("id") == "toreon1") {
+            $("#overlay .title").html("Whiteboard Hacking aka Hands-on Threat Modeling");
+            $("#overlay .text").html("Threat modeling is a structured activity for identifying and evaluating application threats and vulnerabilities. It also allows consideration of security issues at the component or application level. The threat modeling session will teach you to perform threat modeling through a series of workshops, where our trainer will guide you through the different stages of a practical threat model.<br><br>Threat modeling introduction (1 hour):<br><br>Threat modeling in a secure development lifecycle<br>What is threat modeling<br>Why threat modeling?<br>Threat modeling stages<br>Diagrams<br>Identify threats<br>Addressing threats<br>Document a threat model");
+        }
+        if ($(this).attr("id") == "toreon2") {
+            $("#overlay .title").html("STRIDE analysis of an B2B web and mobile applications, sharing the same REST backend (hands-on)");
+            $("#overlay .text").html("Hands-on (1 hour):<br>STRIDE analysis of an B2B web and mobile applications, sharing the same REST backend<br>The students will be challenged to perform practical threat modeling in groups of 3 to 4 people covering the different stages of threat modeling.<br><br>Before attending this course, students should be familiar with basic knowledge of web, mobile Applications and development principles.<br><br>Sebastien Deleersnyder (<a href=\"https://www.linkedin.com/in/sebadele/\">www.linkedin.com/in/sebadele/</a> - lead application security consultant Toreon) led engagements in the domain of ICT-security, Web and Mobile Security with several customers in the private and public sector. Sebastien is the Belgian OWASP Chapter Leader and is co-project leader of OWASP SAMM.");
+        }
+        if ($(this).attr("id") == "wireshark") {
+            $("#overlay .title").html("Analyzing network traffic (hands-on)");
+            $("#overlay .text").html("From packet zero to packet hero<br><br>Erik Vanderhasselt is de managing director van Xiobe. Erik is zijn carriere begonnen op een helpdesk waar hij de waarde van communicatie en overtuiging leerde. Nadien werd hij Database Administrator waar hij de wereld van de consultancy leerde kennen en zijn technische kennis heeft ontwikkeld. Erik zette zijn eerste stappen in security in de 2e helft van de jaren 90, en toen de opportuniteit zich stelde heeft hij ze gegrepen om van zijn hobby zijn beroep te maken.<br><br>Toen hij bij CERT.be werkt werd hem gevraagd om voor EHB een presentatie te doen en tijdens deze presentatie stelde hij de studenten voor om samen met het onderwijzend personeel eventueel te kijken naar legale opties rond hacken om de studenten hun kennis over security te ontwikkelen. Ondertussen zijn we enkele jaren verder en EHackB is een jaarlijks gebeuren.<br><br>Wireshark, elke IT-er heeft er al van gehoord. Een packet trace openen en een beetje kijken naar de packets is de standard ervaring. In deze workshop neemt Erik je mee en gaan we dieper in op een tool die je Zwitsers zakmes zal worden als je weet wat je er mee kan. Op het programma:<br><br>- Profiles<br>- Filters<br>- Data Extraction<br>- Analysis & reporting<br>- Expert information<br>- Troubleshooting Exercises (hands-on)<br><br>Om deel te nemen breng je een laptop mee met daarop een werkende installatie van wireshark indien mogelijk. Er zullen ook pc’s voorzien worden. De traces zullen enkele dagen voor EHackB worden aangeleverd via de Erasmushogeschool. Netwerk protocol kennis is vereist maar we gaan over de basics.");
         }
         if ($(this).attr("id") == "barracuda") {
             $("#overlay .title").html("Philippe Michiels &amp; Johan van Gestel");
@@ -40,7 +68,7 @@ function overlays() {
         }
         if ($(this).attr("id") == "fifa") {
             $("#overlay .title").html("FIFA");
-            $("#overlay .text").html(" Durf je je talent en skills te komen tonen op het voetbalveld, en als deze goed genoeg zijn kans te maken op een prijs? Dan is ons FIFA17 Toernooi de perfecte opportuniteit voor jou! Registreer je snel omdat er maar slechts 16 deelnemers toegestaan zijn. Lengte van een match: - Achtste Finale: 6’ - Achtste Finale: 6’ - Vierde Finale: 6’ - Halve Finale: 8’ - Finale: 8’ - Kleine Finale: 8’ Het toernooi wordt op PS4 gespeeld. Wanneer een deelnemer verliest wordt hij/zij geëlimineerd. De deelnemers zullen gevraagd worden, door het centrale streaming, te komen opdagen een paar minuten voor de match. Als deze na vijf minuten het einde van de vorige match niet komt opdagen wordt deze geëlimineerd. Elke deelnemer kan het spel maar maximum drie keer pauzeren per match.");
+            $("#overlay .text").html(" Durf je je talent en skills te komen tonen op het voetbalveld, en als deze goed genoeg zijn kans te maken op een prijs? Dan is ons FIFA18 Toernooi de perfecte opportuniteit voor jou! Registreer je snel omdat er maar slechts 16 deelnemers toegestaan zijn. Lengte van een match: - Achtste Finale: 6’ - Achtste Finale: 6’ - Vierde Finale: 6’ - Halve Finale: 8’ - Finale: 8’ - Kleine Finale: 8’ Het toernooi wordt op PS4 gespeeld. Wanneer een deelnemer verliest wordt hij/zij geëlimineerd. De deelnemers zullen gevraagd worden, door het centrale streaming, te komen opdagen een paar minuten voor de match. Als deze na vijf minuten het einde van de vorige match niet komt opdagen wordt deze geëlimineerd. Elke deelnemer kan het spel maar maximum drie keer pauzeren per match.");
         }
         if ($(this).attr("id") == "lol") {
             $("#overlay .title").html("League of Legends");
@@ -107,7 +135,7 @@ function overlays() {
 }
 
 function countDown() {
-    var countDownDate = new Date("Dec 15, 2017 16:45:00").getTime();
+    var countDownDate = new Date("Fri Dec 15 2017 15:00:00 GMT+0100").getTime();
     var x = setInterval(function () {
         var now = new Date().getTime();
         var distance = countDownDate - now;
