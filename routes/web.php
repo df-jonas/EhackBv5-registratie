@@ -10,13 +10,17 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+// Show index
+Route::get('/', function (){
+    return view('ehackb.2017');
+});
+
+/*
+
 Auth::routes();
-Route::get('/home', 'HomeController@index');
 
 Route::group(['middleware' => 'web'], function () {
-
-    // Show index
-    Route::get('/', 'RegistrationController@index');
 
     // Show user his info
     Route::get('show', 'RegistrationController@show');
@@ -85,3 +89,5 @@ Route::group(['middleware' => ['auth', 'admin']], function () {
     Route::post('admin/manage/option', 'Admin\AdminController@managePostOption');
     Route::get('admin/manage/option/{option_id}', 'Admin\AdminController@jsonServiceOption');
 });
+
+*/
