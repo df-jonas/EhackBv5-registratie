@@ -83,7 +83,7 @@
                 <div>
                     <img src="img/registreren/logoSimple.svg" alt="Logo" />
                     <p>Binnenkort kan je hier registreren voor
-                        <br>EHackB Editie 5 - 2017!</p>
+                        <br>EhackB 2017!</p>
                     <!-- <a href="#" class="button">Registreren</a> -->
                 </div>
             </div>
