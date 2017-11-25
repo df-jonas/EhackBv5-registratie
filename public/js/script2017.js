@@ -17,6 +17,10 @@ function overlays() {
             $("#overlay .title").html("TBA");
             $("#overlay .text").html("");
         }
+        if ($(this).attr("id") == "ctf") {
+            $("#overlay .title").html("TBA");
+            $("#overlay .text").html("");
+        }
         if ($(this).attr("id") == "checkpoint") {
             $("#overlay .title").html("TBA");
             $("#overlay .text").html("");
@@ -64,7 +68,7 @@ function overlays() {
         }
         if ($(this).attr("id") == "fifa") {
             $("#overlay .title").html("FIFA");
-            $("#overlay .text").html(" Durf je je talent en skills te komen tonen op het voetbalveld, en als deze goed genoeg zijn kans te maken op een prijs? Dan is ons FIFA17 Toernooi de perfecte opportuniteit voor jou! Registreer je snel omdat er maar slechts 16 deelnemers toegestaan zijn. Lengte van een match: - Achtste Finale: 6’ - Achtste Finale: 6’ - Vierde Finale: 6’ - Halve Finale: 8’ - Finale: 8’ - Kleine Finale: 8’ Het toernooi wordt op PS4 gespeeld. Wanneer een deelnemer verliest wordt hij/zij geëlimineerd. De deelnemers zullen gevraagd worden, door het centrale streaming, te komen opdagen een paar minuten voor de match. Als deze na vijf minuten het einde van de vorige match niet komt opdagen wordt deze geëlimineerd. Elke deelnemer kan het spel maar maximum drie keer pauzeren per match.");
+            $("#overlay .text").html(" Durf je je talent en skills te komen tonen op het voetbalveld, en als deze goed genoeg zijn kans te maken op een prijs? Dan is ons FIFA18 Toernooi de perfecte opportuniteit voor jou! Registreer je snel omdat er maar slechts 16 deelnemers toegestaan zijn. Lengte van een match: - Achtste Finale: 6’ - Achtste Finale: 6’ - Vierde Finale: 6’ - Halve Finale: 8’ - Finale: 8’ - Kleine Finale: 8’ Het toernooi wordt op PS4 gespeeld. Wanneer een deelnemer verliest wordt hij/zij geëlimineerd. De deelnemers zullen gevraagd worden, door het centrale streaming, te komen opdagen een paar minuten voor de match. Als deze na vijf minuten het einde van de vorige match niet komt opdagen wordt deze geëlimineerd. Elke deelnemer kan het spel maar maximum drie keer pauzeren per match.");
         }
         if ($(this).attr("id") == "lol") {
             $("#overlay .title").html("League of Legends");
@@ -131,7 +135,7 @@ function overlays() {
 }
 
 function countDown() {
-    var countDownDate = new Date("Dec 15, 2017 16:45:00").getTime();
+    var countDownDate = new Date("Fri Dec 15 2017 15:00:00 GMT+0100").getTime();
     var x = setInterval(function () {
         var now = new Date().getTime();
         var distance = countDownDate - now;

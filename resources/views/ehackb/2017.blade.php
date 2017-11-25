@@ -29,7 +29,7 @@
 <body id="top">
     <header>
         <nav class="navbar fixed-top navbar-expand-md navbar-dark" style="background-color: #0D0D35;">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="#top">
                 <img src="img/logo5.svg" width="30" height="30" alt="">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -41,6 +41,9 @@
                 <ul class="navbar-nav ml-auto">
                     <li class="invisible">
                         <a href=""></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link smooth-scroll" href="#top">Start</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link smooth-scroll" href="#registreren">Registreren</a>
@@ -208,18 +211,6 @@
                     <div class="card">
                         <img class="card-img-top" src="img/card.jpg" alt="Card image cap">
                         <div class="card-body">
-                            <h4 class="card-title">Erik Vanderhasselt (Wireshark)</h4>
-                            <h6 class="card-subtitle mb-2 text-muted">Analyzing network traffic (hands-on)</h6>
-                            <!--<p class="card-text"></p>-->
-                            <a href="" id="wireshark" class="card-link showOverlay">Meer info...</a>
-                        </div>
-                        <div class="card-footer">
-                            <small class="text-muted">15:00 - 16:00 / NL</small>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img class="card-img-top" src="img/card.jpg" alt="Card image cap">
-                        <div class="card-body">
                             <h4 class="card-title">Sebastien Deleersnyder (Toreon)</h4>
                             <h6 class="card-subtitle mb-2 text-muted">STRIDE analysis of an B2B web and mobile applications, sharing the same REST backend (hands-on)</h6>
                             <!--<p class="card-text"></p>-->
@@ -227,6 +218,30 @@
                         </div>
                         <div class="card-footer">
                             <small class="text-muted">18:15 - 19:15 / NL</small>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="card-img-top" src="img/card.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title">Erik Vanderhasselt (Wireshark)</h4>
+                            <h6 class="card-subtitle mb-2 text-muted">Analyzing network traffic (hands-on)</h6>
+                            <!--<p class="card-text"></p>-->
+                            <a href="" id="wireshark" class="card-link showOverlay">Meer info...</a>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">19:30 - 20:30 / NL</small>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="card-img-top" src="img/card.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title">Capture the flag</h4>
+                            <h6 class="card-subtitle mb-2 text-muted"></h6>
+                            <!--<p class="card-text"></p>-->
+                            <a href="" id="ctf" class="card-link showOverlay">Meer info...</a>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">doorlopend</small>
                         </div>
                     </div>
                 </div>
@@ -314,32 +329,32 @@
                 <h2>CORNERS</h2>
                 <ul>
                     <li>
-                        <button id="hack" class="">
+                        <button id="hack" class="showOverlay">
                             <img src="img/corners/hack.png" alt="" />
                         </button>
                     </li>
                     <li>
-                        <button id="casual" class="">
+                        <button id="casual" class="showOverlay">
                             <img src="img/corners/casual.png" alt="" />
                         </button>
                     </li>
                     <li>
-                        <button id="create" class="">
+                        <button id="create" class="showOverlay">
                             <img src="img/corners/create.png" alt="" />
                         </button>
                     </li>
                     <li>
-                        <button id="competitive" class="">
+                        <button id="competitive" class="showOverlay">
                             <img src="img/corners/play.png" alt="" />
                         </button>
                     </li>
                     <li>
-                        <button id="food" class="">
+                        <button id="food" class="showOverlay">
                             <img src="img/corners/food.png" alt="" />
                         </button>
                     </li>
                     <li>
-                        <button id="learn" class="">
+                        <button id="learn" class="showOverlay">
                             <img src="img/corners/learn.png" alt="" />
                         </button>
                     </li>
@@ -390,7 +405,7 @@
             <img src="img/logo/signpost.jpg" alt="Signpost">
             <img src="img/logo/Stylelabs.png" alt="Stylelabs">
             <img src="img/logo/switchpoint-logo-color-no_border-final.jpg" alt="Switchpoint">
-            <img src="img/logo/teamspeak_horizontal.png" alt="Teamspeak">
+            <a href="http://www.teamspeak.com/?tour=yes"><img src="img/logo/teamspeak_horizontal.png" alt="Teamspeak"></a>
         </div>
 
     </footer>
