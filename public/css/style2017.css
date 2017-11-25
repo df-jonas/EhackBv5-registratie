@@ -30,15 +30,13 @@ header li a.active {
     border-bottom: 4px solid #b94177;
 }
 
-
-
 /* --- GENERAL --- */
 
 section {
     height: calc(100vh - 50px);
     box-sizing: border-box;
     min-height: 620px;
-} */
+}
 
 /* --- HOME --- */
 
@@ -185,7 +183,7 @@ section#programma .card-deck {
 
 section#programma .card {
     border: none;
-    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
     border-radius: 10px;
 }
 
@@ -209,7 +207,6 @@ section#programma .card-text {
 section#programma .card-link {
     color: #4B81BA;
 }
-
 
 /* --- CORNERS --- */
 
@@ -381,7 +378,7 @@ button:hover {
 /* --- FOOTER ---*/
 
 footer {
-    float: left; 
+    float: left;
     width: 100%;
 }
 
@@ -399,7 +396,6 @@ footer {
 
 /* --- QUERIES --- */
 
-
 @media (max-width: 1024px) {
 
     header nav {
@@ -412,7 +408,6 @@ footer {
         margin: 0 5%;
     }
 
-    
     .sectionwrapper {
         width: 90%;
         margin: 0 5%;
@@ -432,35 +427,32 @@ footer {
         right: 0.5em;
     }
 
-
 }
 
 @media (max-width: 950px) {
 
-.card-deck {
-    display: block;
-    width: 100%;
-    margin:0 !important;
-    margin-top: 3em !important;
-    table-layout: fixed;
+    .card-deck {
+        display: block;
+        width: 100%;
+        margin: 0 !important;
+        margin-top: 3em !important;
+        table-layout: fixed;
+    }
+
+    .card-deck .card {
+        display: block;
+        width: 100%;
+        margin: 0;
+        margin-bottom: 3em;
+    }
+
+    section#programma .card-img-top {
+
+        height: 400px !important;
+
+    }
+
 }
-
-.card-deck .card {
-    display: block;
-    width: 100%;
-    margin:0;
-    margin-bottom: 3em;
-}
-
-section#programma .card-img-top {
-
-    height: 400px !important;
-
-}
-
-}
-
-
 
 @media (max-width: 768px) {
 
@@ -468,11 +460,11 @@ section#programma .card-img-top {
         border: none;
         padding: 1.5em 0 !important;
     }
-    
+
     header li a:hover {
         border: none;
     }
-    
+
     header li a.active {
         border: none;
     }
@@ -486,9 +478,9 @@ section#programma .card-img-top {
     }
 
     section#programma .card-img-top {
-        
-            height: 300px !important;
-        
+
+        height: 300px !important;
+
     }
 
     .title {
@@ -499,5 +491,4 @@ section#programma .card-img-top {
         font-size: 0.8em;
         top: 60%;
     }
-
 }
