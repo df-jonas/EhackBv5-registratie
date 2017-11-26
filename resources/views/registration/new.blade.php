@@ -62,12 +62,9 @@
                             <!-- REMINDER EMAIL -->
 
                             <div class="form-group {{ $errors->has('email') ? ' has-error' : '' }}">
-                                <label for="inputReminderEmail" class="control-label">Reminder E-mail</label>
+                                <label for="inputReminderEmail" class="control-label">Reminder E-mail*</label>
                                 <input type="email" value="{{ old('reminderemail') }}" name="reminderemail"
-                                       class="form-control" id="inputReminderEmail" placeholder="Reminder E-mail">
-                                <small id="reminderHelp" class="form-text text-muted">Deze mail wordt gebruikt voor
-                                    nieuwsbrieven en is optioneel.
-                                </small>
+                                       class="form-control" id="inputReminderEmail" placeholder="Reminder E-mail" required>
                             </div>
                         </div>
 
@@ -112,8 +109,7 @@
 
                             <div class="form-group {{ $errors->has('steamid') ? ' has-error' : '' }}">
                                 <label for="steamid" class="control-label">SteamID</label>
-                                <input type="text" name="steamid" class="form-control" id="steamid"
-                                       placeholder="SteamID" value="{{ old('steamid') }}" />
+                                <input type="text" name="steamid" class="form-control" id="steamid" placeholder="SteamID" value="{{ old('steamid') }}"/>
                                 @if ($errors->has('steamid'))
                                     <span class="help-block"><strong>{{ $errors->first('steamid') }}</strong></span>
                                 @endif
@@ -209,11 +205,11 @@
                     <div class="form-group">
                         <label for="formSelect" class="control-label">Maak je keuze</label>
                         <select class="form-control" id="formSelect">
-                            <option selected value="1">Ik zal niet deelnemen aan een team</option>
-                            <option value="2">Ik maak mijn eigen team</option>
-                            <!-- <option value="3">Ik sluit mij aan bij een bestaand team</option> -->
-                         </select>
-                     </div>
+                            <option selected value="1">Ik schrijf mij enkel in en zal niet deelnemen met een team.</option>
+                            <option value="2">Ik schrijf mij in voor competitive gaming en maak mijn eigen team.</option>
+                            <option value="3">Ik schrijf mij in voor competitive gaming en sluit mij aan bij een publiek team.</option>
+                        </select>
+                    </div>
 
                      <!-- NEW TEAM -->
 
