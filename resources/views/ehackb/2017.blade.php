@@ -57,6 +57,9 @@
                     <li class="nav-item">
                         <a class="nav-link smooth-scroll" href="#locatie">Locatie</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link smooth-scroll" href="login">Inloggen</a>
+                    </li>
                 </ul>
             </div>
         </nav>
@@ -85,9 +88,9 @@
             <div class="register_center">
                 <div>
                     <img src="img/registreren/logoSimple.svg" alt="Logo" />
-                    <p>Binnenkort kan je hier registreren voor
-                        <br>EhackB 2017!</p>
-                    <!-- <a href="#" class="button">Registreren</a> -->
+                    {{--<p>Binnenkort kan je hier registreren voor
+                        <br>EhackB 2017!</p>--}}
+                    <a href="new" class="button">Registreren</a>
                 </div>
             </div>
 
@@ -101,7 +104,7 @@
 
                 <div class="card-deck">
                     <div class="card">
-                        <img class="card-img-top" src="img/card.jpg" alt="Card image cap">
+                        <img class="card-img-top" src="img/programma/internet-of-things-IoT.jpeg" alt="Card image cap">
                         <div class="card-body">
                             <h4 class="card-title">Bart Keybergh (Userfull)</h4>
                             <h6 class="card-subtitle mb-2 text-muted">Internet Of Things</h6>
@@ -113,7 +116,7 @@
                         </div>
                     </div>
                     <div class="card">
-                        <img class="card-img-top" src="img/card.jpg" alt="Card image cap">
+                        <img class="card-img-top" src="img/programma/cloudsecurity.jpg" alt="Card image cap">
                         <div class="card-body">
                             <h4 class="card-title">Philippe Michiels &amp; Johan van Gestel (Barracuda)</h4>
                             <h6 class="card-subtitle mb-2 text-muted">Security &amp; Networking in the Cloud Generation</h6>
@@ -140,7 +143,7 @@
 
                 <div class="card-deck">
                     <div class="card">
-                        <img class="card-img-top" src="img/card.jpg" alt="Card image cap">
+                        <img class="card-img-top" src="img/programma/NOC.jpg" alt="Card image cap">
                         <div class="card-body">
                             <h4 class="card-title">Koen Vanhees (Cegeka)</h4>
                             <h6 class="card-subtitle mb-2 text-muted">Een Security Operation Center – voorbeelden ‘from the field’</h6>
@@ -152,7 +155,7 @@
                         </div>
                     </div>
                     <div class="card">
-                        <img class="card-img-top" src="img/card.jpg" alt="Card image cap">
+                        <img class="card-img-top" src="img/programma/threatModelling.png" alt="Card image cap">
                         <div class="card-body">
                             <h4 class="card-title">Sebastien Deleersnyder (Toreon)</h4>
                             <h6 class="card-subtitle mb-2 text-muted">Whiteboard Hacking aka Hands-on Threat Modeling</h6>
@@ -164,7 +167,7 @@
                         </div>
                     </div>
                     <div class="card">
-                        <img class="card-img-top" src="img/card.jpg" alt="Card image cap">
+                        <img class="card-img-top" src="img/programma/zerodayexploit.png" alt="Card image cap">
                         <div class="card-body">
                             <h4 class="card-title">Rutger Truyers (Checkpoint)</h4>
                             <h6 class="card-subtitle mb-2 text-muted">ZERO-Day prevention</h6>
@@ -179,7 +182,7 @@
 
                 <div class="card-deck">
                     <div class="card">
-                        <img class="card-img-top" src="img/card.jpg" alt="Card image cap">
+                        <img class="card-img-top" src="img/programma/gamedevelopment.jpg" alt="Card image cap">
                         <div class="card-body">
                             <h4 class="card-title">Dirk Van Welden</h4>
                             <h6 class="card-subtitle mb-2 text-muted">Game development </h6>
@@ -209,7 +212,7 @@
                 <hr>
                 <div class="card-deck">
                     <div class="card">
-                        <img class="card-img-top" src="img/card.jpg" alt="Card image cap">
+                        <img class="card-img-top" src="img/programma/rest.jpg" alt="Card image cap">
                         <div class="card-body">
                             <h4 class="card-title">Sebastien Deleersnyder (Toreon)</h4>
                             <h6 class="card-subtitle mb-2 text-muted">STRIDE analysis of an B2B web and mobile applications, sharing the same REST backend (hands-on)</h6>
@@ -221,7 +224,7 @@
                         </div>
                     </div>
                     <div class="card">
-                        <img class="card-img-top" src="img/card.jpg" alt="Card image cap">
+                        <img class="card-img-top" src="img/programma/wireshark.jpg" alt="Card image cap">
                         <div class="card-body">
                             <h4 class="card-title">Erik Vanderhasselt (Wireshark)</h4>
                             <h6 class="card-subtitle mb-2 text-muted">Analyzing network traffic (hands-on)</h6>
@@ -233,7 +236,7 @@
                         </div>
                     </div>
                     <div class="card">
-                        <img class="card-img-top" src="img/card.jpg" alt="Card image cap">
+                        <img class="card-img-top" src="img/programma/capturetheflag.jpg" alt="Card image cap">
                         <div class="card-body">
                             <h4 class="card-title">Capture the flag</h4>
                             <h6 class="card-subtitle mb-2 text-muted"></h6>
