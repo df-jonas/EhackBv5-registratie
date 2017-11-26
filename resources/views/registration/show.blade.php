@@ -13,9 +13,15 @@
             <ul class="list-group">
                 <li class="list-group-item"><b>Voornaam: </b>{{ $user->firstName }}</li>
                 <li class="list-group-item"><b>Achternaam: </b>{{ $user->lastName }}</li>
-                @if(!empty($user->steamid))
-                    <li class="list-group-item"><b>SteamID: </b>{{ $user->steamid }}</li>
-                @endif
+                <form method="POST" action="editSteamID">
+                    {{ csrf_field() }}
+                    <li class="list-group-item"><b>SteamID: </b>
+                        <input type="text" class=“form-control” name="steamid" id="steamid" required value="{{ $user->steamid }}"/>
+                        <button style="margin-left:5px;" id="editSteamID" name="submitbutton" type="submit" class="btn btn-primary">Wijzig SteamID</button>
+
+                    </li>
+
+                </form>
                 <li class="list-group-item"><b>E-mailadres: </b>{{ $user->email }}</li>
                 @if(!empty($user->reminderMail))
                     <li class="list-group-item"><b>Reminder E-mailadres: </b>{{ $user->reminderMail }}</li>

@@ -80,5 +80,6 @@
         crossorigin="anonymous"></script>
 <script src="{{ URL::to('js/register.js') }}"></script>
 
+
 </body>
 </html>
