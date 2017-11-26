@@ -1,9 +1,7 @@
 @extends('layouts.register')
 
 @section('title')
-
     <title>Profiel</title>
-
 @endsection
 
 @section('content')

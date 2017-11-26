@@ -230,8 +230,7 @@ class RegistrationController extends Controller
         }
         return redirect("/show");
     }
-
-
+  
     //poging tot games beschikbaar maken na inloggen
 /*    public function storeTeamExistingUser(RegisterTeamRequest $request)
 {
@@ -586,6 +585,7 @@ class RegistrationController extends Controller
         $user->reminderMail = $request->input('reminderemail');
         $user->firstname = $request->input('firstname');
         $user->lastname = $request->input('lastname');
+        $user->steamid = $request->input("steamid");
         $user->password = Hash::make($request->input('password'));
         $user->confirmationToken = str_replace('/', '_', Str::random(60));
         $savedUser = $user->save(); // create user

@@ -60,6 +60,9 @@ Route::group(['middleware' => 'web'], function () {
     Route::post('editOptions', 'RegistrationController@editOptions');
 
     Route::post('storeTeamExistingUser', 'RegistrationController@storeTeamExistingUser');
+
+    // edit steamid
+    Route::post('editSteamID', 'RegistrationController@editSteamID');
 });
 
 // Admin panel
