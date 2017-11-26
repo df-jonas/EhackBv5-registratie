@@ -211,11 +211,11 @@
                         <select class="form-control" id="formSelect">
                             <option selected value="1">Ik zal niet deelnemen aan een team</option>
                             <option value="2">Ik maak mijn eigen team</option>
-                            <option value="3">Ik sluit mij aan bij een bestaand team</option>
-                        </select>
-                    </div>
+                            <!-- <option value="3">Ik sluit mij aan bij een bestaand team</option> -->
+                         </select>
+                     </div>
 
-                    <!-- NEW TEAM -->
+                     <!-- NEW TEAM -->
 
                     <div id="createTeam">
 
@@ -228,7 +228,7 @@
                                     @if($game->isFull())
                                         <option value={{$game->id}} disabled>{{$game->name}} - volzet</option>
                                     @else
-                                        <option value={{$game->id}}>{{$game->name}}</option>
+                                        <option id="optionID" data-maxplayers="{{$game->maxPlayers}}" value={{$game->id}}>{{$game->name}}</option>
                                     @endif
                                 @endforeach
                             </select>
@@ -242,19 +242,20 @@
                         <div class="form-group">
                             <label for="inputTeamName" class="control-label">Teamleden</label>
                             <!-- Hier ontbreken nog div tags members die in register.js worden aangeroepen. Wanneer deze erbij worden gezet zien we geen emailvelden meer -->
-
-                                        <input type="text" class="form-control" placeholder="E-mail" name="teammembers[]">
-                                        <input type="text" class="form-control" placeholder="E-mail" name="teammembers[]">
-                                        <input type="text" class="form-control" placeholder="E-mail" name="teammembers[]">
-                                        <input type="text" class="form-control" placeholder="E-mail" name="teammembers[]">
-
-                            <small id="reminderHelp" class="form-text text-muted"><strong>Opgepast:</strong> als niet
-                                alle mailvelden ingevuld zijn wordt het team publiek gemaakt!
+                            <div id="members">
+                                <div id="team">
+                                        <input type="email" class="form-control" placeholder="E-mail" name="teammembers[]" required>
+                                        <input type="email" class="form-control" placeholder="E-mail" name="teammembers[]" required>
+                                        <input type="email" class="form-control" placeholder="E-mail" name="teammembers[]" required>
+                                        <input type="email" class="form-control" placeholder="E-mail" name="teammembers[]" required>
+                                </div>
+                            </div>
+                            <small id="reminderHelp" class="form-text text-muted"><strong>Opgepast:</strong> Alle velden moeten ingevuld zijn!
                             </small>
                         </div>
                     </div>
 
-                    <div id="joinTeam">
+                    {{--<div id="joinTeam">
 
                         <h4 class="text-center">Sluit je aan bij een bestaand team</h4>
 
@@ -280,7 +281,7 @@
                                 @endif
                             </div>
                         </div>
-                    </div>
+                    </div>--}}
 
 
                     <input type="submit" name="submitbutton" id="submit" class="btn btn-primary" value="Inschrijven">
@@ -303,6 +304,4 @@
 
 
     @stop
-@section('scripts')
-    <script type="text/javascript" src="{{ asset('js/register.js') }}"></script>
-@stop
+

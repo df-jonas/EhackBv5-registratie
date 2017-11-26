@@ -151,14 +151,20 @@ function publicTeams() {
 }
 
 function updateTeam(){
+
     $("#members").html('');
 
+
     var gameID = $("#inputGameID").val();
-    var teammembers = $("#game"+gameID+"players").val();
+    var teammembers = $("#inputGameID option:selected").data('maxplayers');
+
+
+    console.log(gameID);
+    console.log(teammembers);
 
     if(teammembers!=1) {
         for (var i = 0; i < teammembers-1; i++) {
-            var html2 = "<input type='text' class='form-control' placeholder='E-mail' name='teammembers[]'>";
+            var html2 = "<input type='email' class='form-control' placeholder='E-mail' name='teammembers[]' required>";
             $("#members").append(html2);
         }
     }
