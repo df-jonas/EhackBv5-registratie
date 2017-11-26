@@ -117,7 +117,7 @@
         </div>
       </div>
 
-      <button id="submitbutton" name="submitbutton" type="button" class="btn btn-primary">Submit</button>
+      <button id="submitbutton" name="submitbutton" type="submit" class="btn btn-primary">Submit</button>
     </form>
 @stop
 
