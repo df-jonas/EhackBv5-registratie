@@ -11,12 +11,15 @@
     <div class="card">
         <div class="card-body">
             <img class="card-img-top" src="img/ehackb.png" alt="Card image cap">
-
+            <br><br>
             <p class="text-center">
                 Bij problemen tijdens het registreren kan je steeds contact opnemen via
                 <a href="https://www.facebook.com/EhackB/">Facebook</a> <strong>(snel)</strong>
                 of via <a href="mailto:ehackb@ehb.be">ehackb@ehb.be</a> <strong>(traag)</strong>.
             </p>
+            <div class="alert alert-warning text-center">
+                Registreer niet als je een invite verwacht van je teamleider! Je emailadres kan slechts 1 keer gebruikt worden.
+            </div>
 
             @if (count($errors) > 0)
                 <div class="alert alert-danger">
@@ -33,7 +36,6 @@
                     {{ Session::get('err') }}
                 </div>
             @endif
-            <br/>
 
 
             <form method="post" action="storecasual">
