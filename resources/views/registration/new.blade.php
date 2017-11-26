@@ -211,7 +211,7 @@
                         <select class="form-control" id="formSelect">
                             <option selected value="1">Ik schrijf mij enkel in en zal niet deelnemen met een team.</option>
                             <option value="2">Ik schrijf mij in voor competitive gaming en maak mijn eigen team.</option>
-                            <option value="3">Ik schrijf mij in voor competitive gaming en sluit mij aan bij een bestaand team.</option>
+                            <option value="3">Ik schrijf mij in voor competitive gaming en sluit mij aan bij een publiek team.</option>
                         </select>
                     </div>
 
