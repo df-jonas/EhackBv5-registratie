@@ -259,7 +259,7 @@
                             <a href="" id="csgo" class="card-link showOverlay">Meer info...</a>
                         </div>
                         <div class="card-footer">
-                            <small class="text-muted">TBA</small>
+                            <small class="text-muted">Vanaf 20u</small>
                         </div>
                     </div>
                     <div class="card">
@@ -270,7 +270,7 @@
                             <a href="" id="hearthstone" class="card-link showOverlay">Meer info...</a>
                         </div>
                         <div class="card-footer">
-                            <small class="text-muted">TBA</small>
+                            <small class="text-muted">Vanaf 20u</small>
                         </div>
                     </div>
                     <div class="card">
@@ -281,7 +281,7 @@
                             <a href="" id="fifa" class="card-link showOverlay">Meer info...</a>
                         </div>
                         <div class="card-footer">
-                            <small class="text-muted">TBA</small>
+                            <small class="text-muted">Vanaf 20u</small>
                         </div>
                     </div>
                 </div>
@@ -295,7 +295,7 @@
                             <a href="" id="lol" class="card-link showOverlay">Meer info...</a>
                         </div>
                         <div class="card-footer">
-                            <small class="text-muted">TBA</small>
+                            <small class="text-muted">Vanaf 20u</small>
                         </div>
                     </div>
                     <div class="card">
@@ -306,7 +306,7 @@
                             <a href="" id="ssb" class="card-link showOverlay">Meer info...</a>
                         </div>
                         <div class="card-footer">
-                            <small class="text-muted">TBA</small>
+                            <small class="text-muted">Vanaf 20u</small>
                         </div>
                     </div>
                     <div class="card">
@@ -317,7 +317,7 @@
                             <a href="" id="rl" class="card-link showOverlay">Meer info...</a>
                         </div>
                         <div class="card-footer">
-                            <small class="text-muted">TBA</small>
+                            <small class="text-muted">Vanaf 20u</small>
                         </div>
                     </div>
                 </div>
