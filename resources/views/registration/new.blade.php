@@ -14,8 +14,8 @@
 
             <p class="text-center">
                 Bij problemen tijdens het registreren kan je steeds contact opnemen via
-                de <a href="https://www.facebook.com/EhackB/">facebookpagina</a> of via
-                <a href="mailto:ehackb@ehb.be">ehackb@ehb.be</a>.
+                <a href="https://www.facebook.com/EhackB/">Facebook</a> <strong>(snel)</strong>
+                of via <a href="mailto:ehackb@ehb.be">ehackb@ehb.be</a> <strong>(traag)</strong>.
             </p>
 
             @if (count($errors) > 0)
