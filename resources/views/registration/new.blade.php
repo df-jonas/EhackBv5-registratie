@@ -12,6 +12,12 @@
         <div class="card-body">
             <img class="card-img-top" src="img/ehackb.png" alt="Card image cap">
 
+            <p class="text-center">
+                Bij problemen tijdens het registreren kan je steeds contact opnemen via
+                <a href="https://www.facebook.com/EhackB/">Facebook</a> <strong>(snel)</strong>
+                of via <a href="mailto:ehackb@ehb.be">ehackb@ehb.be</a> <strong>(traag)</strong>.
+            </p>
+
             @if (count($errors) > 0)
                 <div class="alert alert-danger">
                     <ul>
@@ -28,6 +34,7 @@
                 </div>
             @endif
             <br/>
+
 
             <form method="post" action="storecasual">
                 {{ csrf_field() }}
@@ -89,7 +96,8 @@
 
                             <div class="form-group {{ $errors->has('lastname') ? ' has-error' : '' }}">
                                 <label for="inputReminderEmail" class="control-label">Achternaam*</label>
-                                <input type="text" name="lastname" value="{{old('lastname')}}" class="form-control" id="inputLastName"
+                                <input type="text" name="lastname" value="{{old('lastname')}}" class="form-control"
+                                       id="inputLastName"
                                        placeholder="Achternaam" required/>
                                 @if ($errors->has('lastname'))
                                     <span class="help-block"><strong>{{ $errors->first('lastname') }}</strong></span>
