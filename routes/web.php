@@ -26,7 +26,8 @@ Route::group(['middleware' => 'web'], function () {
     Route::get('/home', 'RegistrationController@show')->name('home');
 
     // Display Register form
-    Route::get('new', 'RegistrationController@new');
+    Route::get('/new', 'RegistrationController@new');
+    Route::get('/register', 'RegistrationController@new');
 
     // Mailing handlers
     Route::get('invite/{token}', 'RegistrationController@createMailInvite');
