@@ -50,7 +50,7 @@ Route::group(['middleware' => 'web'], function () {
     Route::post('editSteamID', 'RegistrationController@editSteamID');
 
     // Store a new Mail invited
-    Route::post('registermail', 'RegistrationController@storeMailInvite');
+    Route::post('registermail', 'RegistrationController@storeMailInvite')->name('registermail');
 
     // Show user his info
     // Show user edit screen

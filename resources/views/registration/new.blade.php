@@ -18,27 +18,24 @@
                 of via <a href="mailto:ehackb@ehb.be">ehackb@ehb.be</a> <strong>(traag)</strong>.
             </p>
             <div class="alert alert-warning text-center">
-                Registreer niet als je een invite verwacht van je teamleider! Je emailadres kan slechts 1 keer gebruikt worden.
+                Registreer niet als je een invite verwacht van je teamleider! Je emailadres kan slechts 1 keer gebruikt
+                worden.
             </div>
 
             @if (count($errors) > 0)
-                <div class="alert alert-danger">
-                    <ul>
-                        @foreach ($errors->all() as $error)
-                            <li>{{ $error }}</li>
-                        @endforeach
-                    </ul>
-                </div>
+                @foreach ($errors->all() as $error)
+                    <div class="alert alert-danger text-center">{{ $error }}</div>
+                @endforeach
             @endif
 
             @if(Session::has('err'))
-                <div class="alert alert-danger">
+                <div class="alert alert-danger text-center">
                     {{ Session::get('err') }}
                 </div>
             @endif
 
 
-            <form method="post" action="storecasual">
+            <form id="registerForm" method="post" action="storecasual">
                 {{ csrf_field() }}
                 <div id="register1">
 
@@ -64,9 +61,9 @@
                             <!-- REMINDER EMAIL -->
 
                             <div class="form-group {{ $errors->has('email') ? ' has-error' : '' }}">
-                                <label for="inputReminderEmail" class="control-label">Reminder E-mail*</label>
+                                <label for="inputReminderEmail" class="control-label">Reminder E-mail</label>
                                 <input type="email" value="{{ old('reminderemail') }}" name="reminderemail"
-                                       class="form-control" id="inputReminderEmail" placeholder="Reminder E-mail" required>
+                                       class="form-control" id="inputReminderEmail" placeholder="Reminder E-mail">
                             </div>
                         </div>
 
@@ -111,7 +108,8 @@
 
                             <div class="form-group {{ $errors->has('steamid') ? ' has-error' : '' }}">
                                 <label for="steamid" class="control-label">SteamID</label>
-                                <input type="text" name="steamid" class="form-control" id="steamid" placeholder="SteamID" value="{{ old('steamid') }}"/>
+                                <input type="text" name="steamid" class="form-control" id="steamid"
+                                       placeholder="SteamID" value="{{ old('steamid') }}"/>
                                 @if ($errors->has('steamid'))
                                     <span class="help-block"><strong>{{ $errors->first('steamid') }}</strong></span>
                                 @endif
@@ -130,6 +128,9 @@
                                 <label for="inputReminderEmail" class="control-label">Wachtwoord*</label>
                                 <input type="password" name="password" class="form-control" id="inputPassword"
                                        placeholder="Wachtwoord" required/>
+                                @if ($errors->has('password'))
+                                    <span class="help-block"><strong>{{ $errors->first('password') }}</strong></span>
+                                @endif
                             </div>
 
                         </div>
@@ -142,6 +143,9 @@
                                 <label for="inputReminderEmail" class="control-label">Wachtwoord Verificatie*</label>
                                 <input type="password" name="verifypassword" class="form-control" id="inputPassword"
                                        placeholder="Wachtwoordverificatie" required/>
+                                @if ($errors->has('verifypassword'))
+                                    <span class="help-block"><strong>{{ $errors->first('verifypassword') }}</strong></span>
+                                @endif
                             </div>
 
                         </div>
@@ -207,13 +211,17 @@
                     <div class="form-group">
                         <label for="formSelect" class="control-label">Maak je keuze</label>
                         <select class="form-control" id="formSelect">
-                            <option selected value="1">Ik schrijf mij enkel in en zal niet deelnemen met een team.</option>
-                            <option value="2">Ik schrijf mij in voor competitive gaming en maak mijn eigen team.</option>
-                            <option value="3">Ik schrijf mij in voor competitive gaming en sluit mij aan bij een publiek team.</option>
+                            <option selected value="1">Ik schrijf mij enkel in en zal niet deelnemen met een team.
+                            </option>
+                            <option value="2">Ik schrijf mij in voor competitive gaming en maak mijn eigen team.
+                            </option>
+                            {{--<option value="3">Ik schrijf mij in voor competitive gaming en sluit mij aan bij een publiek
+                                team.
+                            </option>--}}
                         </select>
                     </div>
 
-                     <!-- NEW TEAM -->
+                    <!-- NEW TEAM -->
 
                     <div id="createTeam">
 
@@ -226,7 +234,8 @@
                                     @if($game->isFull())
                                         <option value={{$game->id}} disabled>{{$game->name}} - volzet</option>
                                     @else
-                                        <option id="optionID" data-maxplayers="{{$game->maxPlayers}}" value={{$game->id}}>{{$game->name}}</option>
+                                        <option id="optionID" data-maxplayers="{{$game->maxPlayers}}"
+                                                value={{$game->id}}>{{$game->name}}</option>
                                     @endif
                                 @endforeach
                             </select>
@@ -242,13 +251,18 @@
                             <!-- Hier ontbreken nog div tags members die in register.js worden aangeroepen. Wanneer deze erbij worden gezet zien we geen emailvelden meer -->
                             <div id="members">
                                 <div id="team">
-                                        <input type="email" class="form-control" placeholder="E-mail" name="teammembers[]" required>
-                                        <input type="email" class="form-control" placeholder="E-mail" name="teammembers[]" required>
-                                        <input type="email" class="form-control" placeholder="E-mail" name="teammembers[]" required>
-                                        <input type="email" class="form-control" placeholder="E-mail" name="teammembers[]" required>
+                                    <input type="email" class="form-control" placeholder="E-mail" name="teammembers[]"
+                                           >
+                                    <input type="email" class="form-control" placeholder="E-mail" name="teammembers[]"
+                                           >
+                                    <input type="email" class="form-control" placeholder="E-mail" name="teammembers[]"
+                                           >
+                                    <input type="email" class="form-control" placeholder="E-mail" name="teammembers[]"
+                                           >
                                 </div>
                             </div>
-                            <small id="reminderHelp" class="form-text text-muted"><strong>Opgepast:</strong> Alle velden moeten ingevuld zijn!
+                            <small id="reminderHelp" class="form-text text-muted"><strong>Opgepast:</strong> Alle velden
+                                moeten ingevuld zijn!
                             </small>
                         </div>
                     </div>
@@ -301,5 +315,5 @@
     </div>
 
 
-    @stop
+@endsection
 

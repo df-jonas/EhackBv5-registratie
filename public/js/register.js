@@ -3,7 +3,7 @@ $(document).ready(function () {
     formPages();
     formSelect();
     publicTeams();
-
+    checkForm();
     updateTeam();
 
     $("#inputGameID").change(function(){
@@ -121,14 +121,17 @@ function formSelect() {
             $("form").attr("action", "storeteam");
             $("#createTeam").show();
             $("#joinTeam").hide();
+            $("#members input").prop("required",true);
         } else if(this.value == "3") {
             $("form").attr("action", "registerpublic");
             $("#createTeam").hide();
             $("#joinTeam").show();
+            $("#members input").prop("required",false);
         } else if(this.value == "1") {
             $("form").attr("action", "storecasual");
             $("#createTeam").hide();
             $("#joinTeam").hide();
+            $("#members input").prop("required",false);
         }
 
     })
@@ -150,6 +153,24 @@ function publicTeams() {
     });
 }
 
+function checkForm() {
+    $("#registerForm #submit").click(function(event){
+
+        console.log("test");
+
+        $("#register1").show();
+        $("#register2").hide();
+        $("#register3").hide();
+        $("#itemRegister1").addClass("active");
+        $("#itemRegister2").removeClass("active");
+        $("#itemRegister3").removeClass("active");
+        $("#itemRegisterPrevious").addClass("disabled");
+        $("#itemRegisterNext").removeClass("disabled");
+
+
+    });
+}
+
 function updateTeam(){
 
     $("#members").html('');
@@ -164,7 +185,7 @@ function updateTeam(){
 
     if(teammembers!=1) {
         for (var i = 0; i < teammembers-1; i++) {
-            var html2 = "<input type='email' class='form-control' placeholder='E-mail' name='teammembers[]' required>";
+            var html2 = "<input type='email' class='form-control' placeholder='E-mail' name='teammembers[]'>";
             $("#members").append(html2);
         }
     }

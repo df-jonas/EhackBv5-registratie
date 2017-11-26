@@ -389,9 +389,37 @@ footer {
     padding: 50px;
 }
 
-.footer-logo img {
-    max-height: 140px;
-    max-width: 200px;
+.footer-logo .master_logo img {
+    height: 250px;
+    width: 250px;
+    object-fit: contain;
+    margin: 1em;
+}
+
+.footer-logo .master_logo {
+    margin-bottom: 1em;
+}
+
+.footer-logo .mid_logo img {
+    height: 180px;
+    width: 180px;
+    object-fit: contain;
+    margin: 1em;
+}
+
+.footer-logo .mid_logo {
+    margin-bottom: 1em;
+}
+
+.footer-logo .basic_logo img {
+    height: 120px;
+    width: 120px;
+    object-fit: contain;
+    margin: 1em;
+}
+
+.footer-logo .basic_logo {
+    margin-bottom: 1em;
 }
 
 /* --- QUERIES --- */

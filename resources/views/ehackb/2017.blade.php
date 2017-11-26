@@ -395,17 +395,25 @@
     <footer>
 
         <div class="footer-logo">
-            <img src="img/logo/cisco_logo_large.png" alt="Cisco">
-            <img src="img/logo/cisco_meraki.jpg" alt="Cisco - Meraki">
-            <img src="img/logo/ehb-logo.jpg" alt="EhB">
-            <img src="img/logo/Redcorp_logo.png" alt="Redcorp">
-            <img src="img/logo/APC_by_Schneider_Electric_3.png" alt="APC">
-            <br>
-            <img src="img/logo/Acedemic_Software.gif" alt="Academic Software">
-            <img src="img/logo/signpost.jpg" alt="Signpost">
-            <img src="img/logo/Stylelabs.png" alt="Stylelabs">
-            <img src="img/logo/switchpoint-logo-color-no_border-final.jpg" alt="Switchpoint">
-            <a href="http://www.teamspeak.com/?tour=yes"><img src="img/logo/teamspeak_horizontal.png" alt="Teamspeak"></a>
+            <div class="master_logo">
+                <img src="img/logo/ehb-logo.jpg" alt="EhB">
+                <img src="img/logo/signpost.jpg" alt="Signpost">
+                <img src="img/logo/Acedemic_Software.gif" alt="Academic Software">
+                <img src="img/logo/agoria.jpg" alt="Agoria">
+                <img src="img/logo/switchpoint-logo-color-no_border-final.jpg" alt="Switchpoint">
+                <img src="img/logo/APC_by_Schneider_Electric_3.png" alt="APC">
+                <img src="img/logo/Stylelabs.png" alt="Stylelabs">
+            </div>
+            <div class="mid_logo">
+                <img src="img/logo/innoviris.png" alt="Innoviris Brussels">
+                <img src="img/logo/cisco_logo_large.png" alt="Cisco">
+                <a href="http://www.teamspeak.com/?tour=yes" target="_blank"><img src="img/logo/teamspeak_horizontal.png" alt="Teamspeak"></a>
+            </div>
+            <div class="basic_logo">
+                <img src="img/logo/Belnet.png" alt="Belnet">
+                <img src="img/logo/cisco_meraki.jpg" alt="Cisco - Meraki">
+                <img src="img/logo/Redcorp_logo.png" alt="Redcorp">
+            </div>
         </div>
 
     </footer>
