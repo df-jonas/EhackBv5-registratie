@@ -57,6 +57,11 @@
                 <a id="forgotPwd" class="btn btn-link" href="{{ url('/password/reset') }}">
                     Wachtwoord vergeten?
                 </a>
+
+                <a id="newAcc" class="btn btn-link" href="{{ url('/new') }}">
+                    <strong>Nog geen account? Registreer hier.</strong>
+                </a>
+
             </div>
         </form>
 
