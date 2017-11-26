@@ -39,9 +39,6 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
-                    <li class="invisible">
-                        <a href=""></a>
-                    </li>
                     <li class="nav-item">
                         <a class="nav-link smooth-scroll" href="#top">Start</a>
                     </li>
