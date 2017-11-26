@@ -85,8 +85,7 @@
             <div class="register_center">
                 <div>
                     <img src="img/registreren/logoSimple.svg" alt="Logo" />
-                    {{--<p>Binnenkort kan je hier registreren voor
-                        <br>EhackB 2017!</p>--}}
+                    <p>Registreer nu voor EhackB!</p><br><br>
                     <a href="new" class="button">Registreren</a>
                 </div>
             </div>
@@ -259,7 +258,7 @@
                             <a href="" id="csgo" class="card-link showOverlay">Meer info...</a>
                         </div>
                         <div class="card-footer">
-                            <small class="text-muted">TBA</small>
+                            <small class="text-muted">Vanaf 20u</small>
                         </div>
                     </div>
                     <div class="card">
@@ -270,7 +269,7 @@
                             <a href="" id="hearthstone" class="card-link showOverlay">Meer info...</a>
                         </div>
                         <div class="card-footer">
-                            <small class="text-muted">TBA</small>
+                            <small class="text-muted">Vanaf 20u</small>
                         </div>
                     </div>
                     <div class="card">
@@ -281,7 +280,7 @@
                             <a href="" id="fifa" class="card-link showOverlay">Meer info...</a>
                         </div>
                         <div class="card-footer">
-                            <small class="text-muted">TBA</small>
+                            <small class="text-muted">Vanaf 20u</small>
                         </div>
                     </div>
                 </div>
@@ -295,7 +294,7 @@
                             <a href="" id="lol" class="card-link showOverlay">Meer info...</a>
                         </div>
                         <div class="card-footer">
-                            <small class="text-muted">TBA</small>
+                            <small class="text-muted">Vanaf 20u</small>
                         </div>
                     </div>
                     <div class="card">
@@ -306,7 +305,7 @@
                             <a href="" id="ssb" class="card-link showOverlay">Meer info...</a>
                         </div>
                         <div class="card-footer">
-                            <small class="text-muted">TBA</small>
+                            <small class="text-muted">Vanaf 20u</small>
                         </div>
                     </div>
                     <div class="card">
@@ -317,7 +316,7 @@
                             <a href="" id="rl" class="card-link showOverlay">Meer info...</a>
                         </div>
                         <div class="card-footer">
-                            <small class="text-muted">TBA</small>
+                            <small class="text-muted">Vanaf 20u</small>
                         </div>
                     </div>
                 </div>
@@ -402,7 +401,7 @@
                 <img src="img/logo/agoria.jpg" alt="Agoria">
                 <img src="img/logo/switchpoint-logo-color-no_border-final.jpg" alt="Switchpoint">
                 <img src="img/logo/APC_by_Schneider_Electric_3.png" alt="APC">
-                <img src="img/logo/Stylelabs.png" alt="Stylelabs">
+                <img src="img/logo/stylelabs.png" alt="Stylelabs">
             </div>
             <div class="mid_logo">
                 <img src="img/logo/innoviris.png" alt="Innoviris Brussels">

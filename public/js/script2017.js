@@ -39,7 +39,7 @@ function overlays() {
         }
         if ($(this).attr("id") == "toreon2") {
             $("#overlay .title").html("STRIDE analysis of an B2B web and mobile applications, sharing the same REST backend (hands-on)");
-            $("#overlay .text").html("Hands-on (1 hour):<br>STRIDE analysis of an B2B web and mobile applications, sharing the same REST backend<br>The students will be challenged to perform practical threat modeling in groups of 3 to 4 people covering the different stages of threat modeling.<br><br>Before attending this course, students should be familiar with basic knowledge of web, mobile Applications and development principles.<br><br>Sebastien Deleersnyder (<a href=\"https://www.linkedin.com/in/sebadele/\">www.linkedin.com/in/sebadele/</a> - lead application security consultant Toreon) led engagements in the domain of ICT-security, Web and Mobile Security with several customers in the private and public sector. Sebastien is the Belgian OWASP Chapter Leader and is co-project leader of OWASP SAMM.");
+            $("#overlay .text").html("Hands-on (1 hour):<br>STRIDE analysis of an B2B web and mobile applications, sharing the same REST backend<br>The students will be challenged to perform practical threat modeling in groups of 3 to 4 people covering the different stages of threat modeling.<br><br>Before attending this course, students should be familiar with basic knowledge of web, mobile applications and development principles.<br><br>Sebastien Deleersnyder (<a href=\"https://www.linkedin.com/in/sebadele/\">www.linkedin.com/in/sebadele/</a> - lead application security consultant Toreon) led engagements in the domain of ICT-security, Web and Mobile Security with several customers in the private and public sector. Sebastien is the Belgian OWASP Chapter Leader and is co-project leader of OWASP SAMM.");
         }
         if ($(this).attr("id") == "wireshark") {
             $("#overlay .title").html("Analyzing network traffic (hands-on)");
@@ -47,7 +47,7 @@ function overlays() {
         }
         if ($(this).attr("id") == "barracuda") {
             $("#overlay .title").html("Philippe Michiels &amp; Johan van Gestel");
-            $("#overlay .text").html("How about als topic: Security & Networking in the Cloud Generation. We kunnen hiervoor veel info halen uit onze bestaande oplossingen, focusen op SD-WAN, Ransomware, connectiviteit en visibiliteit en het netwerk waar studenten binnen enkele jaren in terecht komen en hoe security en networking er dan meer en meer gaan uitzien, of toch ons zicht daarop.");
+            $("#overlay .text").html("Security & Networking in the Cloud Generation.");
         }
         if ($(this).attr("id") == "guardsquare") {
             $("#overlay .title").html("Irasara Senarathne");
@@ -55,7 +55,7 @@ function overlays() {
         }
         if ($(this).attr("id") == "cegeka") {
             $("#overlay .title").html("Koen Vanhees");
-            $("#overlay .text").html("Het principe van een NOC (Network Operations Center) is al wijdverspreid: aan de hand van next generation firewalls, web application firewalls, web en mail gateways, antivirus,… investeren vele bedrijven al jaren fortuinen aan maatregelen die instaan voor “protect”.  Desondanks worden er dagelijks nog bedrijven gehackt, met grote reputatie- en financiële verliezen tot gevolg.  De cyberbedreigingen worden steeds meer geavanceerd en het wordt steeds meer een uitdaging om een cyberaanval te vermijden.  Vandaar dat er steeds meer wordt gefocust op “detect” en “respond” – naast “protect” – om een impact van een onvermijdelijke cyberaanval zoveel mogelijk te verminderen.  Dit gebeurt typisch in een SOC (Security Operations Center) en in deze seminarie bekijken we hoe zo een SOC zich organiseert aan de hand van voorbeelden “from the field”.");
+            $("#overlay .text").html("Het principe van een NOC (Network Operations Center) is al wijdverspreid: aan de hand van next generation firewalls, web application firewalls, web en mail gateways, antivirus,… investeren vele bedrijven al jaren fortuinen aan maatregelen die instaan voor “protect”.  Desondanks worden er dagelijks nog bedrijven gehackt, met grote reputatie- en financiële verliezen tot gevolg.  De cyberbedreigingen worden steeds meer geavanceerd en het wordt steeds meer een uitdaging om een cyberaanval te vermijden.  Vandaar dat er steeds meer wordt gefocust op “detect” en “respond” – naast “protect” – om een impact van een onvermijdelijke cyberaanval zoveel mogelijk te verminderen.  Dit gebeurt typisch in een SOC (Security Operations Center) en in dit seminarie bekijken we hoe zo een SOC zich organiseert aan de hand van voorbeelden “from the field”.");
         }
 
         if ($(this).attr("id") == "csgo") {
@@ -68,7 +68,7 @@ function overlays() {
         }
         if ($(this).attr("id") == "fifa") {
             $("#overlay .title").html("FIFA");
-            $("#overlay .text").html(" Durf je je talent en skills te komen tonen op het voetbalveld, en als deze goed genoeg zijn kans te maken op een prijs? Dan is ons FIFA18 Toernooi de perfecte opportuniteit voor jou! Registreer je snel omdat er maar slechts 16 deelnemers toegestaan zijn. Lengte van een match: - Achtste Finale: 6’ - Achtste Finale: 6’ - Vierde Finale: 6’ - Halve Finale: 8’ - Finale: 8’ - Kleine Finale: 8’ Het toernooi wordt op PS4 gespeeld. Wanneer een deelnemer verliest wordt hij/zij geëlimineerd. De deelnemers zullen gevraagd worden, door het centrale streaming, te komen opdagen een paar minuten voor de match. Als deze na vijf minuten het einde van de vorige match niet komt opdagen wordt deze geëlimineerd. Elke deelnemer kan het spel maar maximum drie keer pauzeren per match.");
+            $("#overlay .text").html(" Durf je je talent en skills te komen tonen op het voetbalveld, en als deze goed genoeg zijn kans te maken op een prijs? Dan is ons FIFA18 Toernooi de perfecte opportuniteit voor jou! Registreer je snel omdat er maar slechts 16 deelnemers toegestaan zijn. Lengte van een match: - Achtste Finale: 6’ - Achtste Finale: 6’ - Vierde Finale: 6’ - Halve Finale: 8’ - Finale: 8’ - Kleine Finale: 8’ Het toernooi wordt op PS4 gespeeld. Wanneer een deelnemer verliest wordt hij/zij geëlimineerd. Het centrale streaming team vraagt aan alle deelnemers om zeker een paar minuten voor de match op te dagen. Indien je vijf minuten na het einde van volgende match nog niet bent komen opdagen, dan word je geëlimineerd. Elke deelnemer kan het spel maximum drie keer pauzeren per match.");
         }
         if ($(this).attr("id") == "lol") {
             $("#overlay .title").html("League of Legends");
@@ -110,7 +110,7 @@ function overlays() {
 
         if ($(this).attr("id") == "fietsen") {
             $("#overlay .title").html("Stappen - Fietsen");
-            $("#overlay .text").html("Stappen<br> De Nijverheidskaai 170 bevindt zich aan het kanaal Brussel - Charleroi, naast de slachthuizen in Anderlecht.<br><br> Trappen<br> Met de fiets gebruik je het best de 'flat track' routes. De routes vind je hier en de map hier. Alsje geen fiets hebt, kan je er altijd één huren bij Villo of Blue Bike.");
+            $("#overlay .text").html("Stappen<br> De Nijverheidskaai 170 bevindt zich aan het kanaal Brussel - Charleroi, naast de slachthuizen in Anderlecht.<br><br> Trappen<br> Met de fiets gebruik je het best de 'flat track' routes. Als je geen fiets hebt, kan je er altijd één huren bij Villo of Blue Bike.");
         }
 
         if ($(this).attr("id") == "openbaar") {

@@ -519,4 +519,13 @@ footer {
         font-size: 0.8em;
         top: 60%;
     }
+
+    .master_logo img, .mid_logo img, .basic_logo img {
+        width: 90%;
+        margin: 0 5%
+    }
+
+    .footer_logo {
+        padding: 0;
+    }
 }
