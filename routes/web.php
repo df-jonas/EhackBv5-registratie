@@ -11,58 +11,55 @@
 |
 */
 
-// Show index
-Route::get('/', function (){
-    return view('ehackb.2017');
-});
-
-
-
 Auth::routes();
 
+// User panel
 Route::group(['middleware' => 'web'], function () {
 
+    // Show index
+    Route::get('/', function (){
+        return view('ehackb.2017');
+    });
+
     // Show user his info
-    Route::get('show', 'RegistrationController@show');
+    Route::get('/show', 'RegistrationController@show');
     Route::get('/home', 'RegistrationController@show')->name('home');
 
-    // Show user edit screen
-    Route::get('edit', 'RegistrationController@edit');
-
-    // Display form to register Casual
-    Route::get('registercasual', 'RegistrationController@createCasual');
-    // Display form to register Public
-    Route::get('registerteam', 'RegistrationController@createPublic');
-    // Display form to register
-    Route::get('register', 'RegistrationController@create');
-
-    //Display new form
+    // Display Register form
     Route::get('new', 'RegistrationController@new');
-
-    // Store a new Casual
-    Route::post('storecasual', 'RegistrationController@storeCasual');
-
-    // Store a new Public
-    Route::post('registerpublic', 'RegistrationController@storePublicTeam');
-    // Store a new Mail invited
-    Route::post('registermail', 'RegistrationController@storeMailInvite');
-    // Store a new Team
-    Route::post('storeteam', 'RegistrationController@storeTeam');
 
     // Mailing handlers
     Route::get('invite/{token}', 'RegistrationController@createMailInvite');
     Route::get('confirmation/{token}', 'RegistrationController@userConfirmation');
-  
-    // update activitites
+
+    // Update activities
     Route::post('editActivities', 'RegistrationController@editActivities');
 
-    //update options
+    // Register post handlers
+    Route::post('storecasual', 'RegistrationController@storeCasual');
+    Route::post('registerpublic', 'RegistrationController@storePublicTeam');
+    Route::post('storeteam', 'RegistrationController@storeTeam');
+
+    // Update options
     Route::post('editOptions', 'RegistrationController@editOptions');
 
     Route::post('storeTeamExistingUser', 'RegistrationController@storeTeamExistingUser');
 
-    // edit steamid
+    // Edit steamid
     Route::post('editSteamID', 'RegistrationController@editSteamID');
+
+    // Store a new Mail invited
+    Route::post('registermail', 'RegistrationController@storeMailInvite');
+
+    // Show user his info
+    // Show user edit screen
+    // Route::get('/edit', 'RegistrationController@edit');
+    // Display form to register Casual
+    // Route::get('registercasual', 'RegistrationController@createCasual');
+    // Display form to register Public
+    // Route::get('registerteam', 'RegistrationController@createPublic');
+    // Display form to register
+    // Route::get('register', 'RegistrationController@create');
 });
 
 // Admin panel
