@@ -16,7 +16,7 @@ Route::get('/', function (){
     return view('ehackb.2017');
 });
 
-/*
+
 
 Auth::routes();
 
@@ -90,4 +90,3 @@ Route::group(['middleware' => ['auth', 'admin']], function () {
     Route::get('admin/manage/option/{option_id}', 'Admin\AdminController@jsonServiceOption');
 });
 
-*/

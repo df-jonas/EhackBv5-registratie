@@ -56,7 +56,7 @@
                                value="{{$activity->name}} ({{date("H:i",strtotime($activity->startDate)) }}u-{{date("H:i",strtotime($activity->endDate))}}u)@if($activity->maxUsers != 9999) - Plaatsen: {{ $activity->maxUsers - $activity->users->count() }} @endif">
                     </div>
                 @endforeach
-                <button id="submitbutton" name="submitbtton" type="submit" class="btn btn-primary">Activitieten opslaan</button>
+                <button id="submitbutton" name="submitbtton" type="submit" class="btn btn-primary">Activiteiten opslaan</button>
             </form>
 
             <h2 class="text-center">Opties</h2>
