@@ -520,7 +520,12 @@ footer {
         top: 60%;
     }
 
-    .master_logo, .mid_logo, .basic_logo {
-        width: 100%;
+    .master_logo img, .mid_logo img, .basic_logo img {
+        width: 90%;
+        margin: 0 5%
+    }
+
+    .footer_logo {
+        padding: 0;
     }
 }
