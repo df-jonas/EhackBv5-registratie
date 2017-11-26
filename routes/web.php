@@ -16,7 +16,7 @@ Route::get('/', function (){
     return view('ehackb.2017');
 });
 
-/*
+
 
 Auth::routes();
 
@@ -36,8 +36,12 @@ Route::group(['middleware' => 'web'], function () {
     // Display form to register
     Route::get('register', 'RegistrationController@create');
 
+    //Display new form
+    Route::get('new', 'RegistrationController@new');
+
     // Store a new Casual
     Route::post('storecasual', 'RegistrationController@storeCasual');
+
     // Store a new Public
     Route::post('registerpublic', 'RegistrationController@storePublicTeam');
     // Store a new Mail invited
@@ -89,4 +93,3 @@ Route::group(['middleware' => ['auth', 'admin']], function () {
     Route::get('admin/manage/option/{option_id}', 'Admin\AdminController@jsonServiceOption');
 });
 
-*/

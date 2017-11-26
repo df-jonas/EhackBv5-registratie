@@ -57,6 +57,9 @@
                     <li class="nav-item">
                         <a class="nav-link smooth-scroll" href="#locatie">Locatie</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link smooth-scroll" href="login">Inloggen</a>
+                    </li>
                 </ul>
             </div>
         </nav>
@@ -85,9 +88,9 @@
             <div class="register_center">
                 <div>
                     <img src="img/registreren/logoSimple.svg" alt="Logo" />
-                    <p>Binnenkort kan je hier registreren voor
-                        <br>EhackB 2017!</p>
-                    <!-- <a href="#" class="button">Registreren</a> -->
+                    {{--<p>Binnenkort kan je hier registreren voor
+                        <br>EhackB 2017!</p>--}}
+                    <a href="new" class="button">Registreren</a>
                 </div>
             </div>
 
