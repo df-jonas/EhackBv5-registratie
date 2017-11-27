@@ -192,7 +192,7 @@
                     <div class="card">
                         <img class="card-img-top" src="img/card.jpg" alt="Card image cap">
                         <div class="card-body">
-                            <h4 class="card-title">Frederik De Ryck (Accenture)</h4>
+                            <h4 class="card-title">Accenture Security Team</h4>
                             <h6 class="card-subtitle mb-2 text-muted">TBA</h6>
                             <!--<p class="card-text"></p>-->
                             <a href="" id="accenture" class="card-link showOverlay">Meer info...</a>
@@ -240,7 +240,7 @@
                             <a href="" id="ctf" class="card-link showOverlay">Meer info...</a>
                         </div>
                         <div class="card-footer">
-                            <small class="text-muted">doorlopend</small>
+                            <small class="text-muted">Start @ 20:30 // doorlopend // Grote zaal</small>
                         </div>
                     </div>
                 </div>
