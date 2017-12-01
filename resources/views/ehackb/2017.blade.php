@@ -85,7 +85,7 @@
             <div class="register_center">
                 <div>
                     <img src="img/registreren/logoSimple.svg" alt="Logo" />
-                    <p>Registreer nu voor EhackB!</p><br><br>
+                    <p>Registreer nu voor EhackB!<br>15 & 16 december 2017</p><br><br>
                     <a href="new" class="button">Registreren</a>
                 </div>
             </div>
@@ -114,7 +114,7 @@
                     <div class="card">
                         <img class="card-img-top" src="img/programma/cloudsecurity.jpg" alt="Card image cap">
                         <div class="card-body">
-                            <h4 class="card-title">Philippe Michiels &amp; Johan van Gestel (Barracuda)</h4>
+                            <h4 class="card-title">Koert Martens (Kappa Data, Barracuda)</h4>
                             <h6 class="card-subtitle mb-2 text-muted">Security &amp; Networking in the Cloud Generation</h6>
                             <!--<p class="card-text"></p>-->
                             <a href="" id="barracuda" class="card-link showOverlay">Meer info...</a>
@@ -151,7 +151,7 @@
                         </div>
                     </div>
                     <div class="card">
-                        <img class="card-img-top" src="img/programma/threatModelling.png" alt="Card image cap">
+                        <img class="card-img-top" src="img/programma/toreon_sebastien.jpg" alt="Card image cap">
                         <div class="card-body">
                             <h4 class="card-title">Sebastien Deleersnyder (Toreon)</h4>
                             <h6 class="card-subtitle mb-2 text-muted">Whiteboard Hacking aka Hands-on Threat Modeling</h6>
@@ -240,7 +240,7 @@
                             <a href="" id="ctf" class="card-link showOverlay">Meer info...</a>
                         </div>
                         <div class="card-footer">
-                            <small class="text-muted">Start @ 20:30 // doorlopend // Grote zaal</small>
+                            <small class="text-muted">Vanaf 20:30 - doorlopend // Grote zaal</small>
                         </div>
                     </div>
                 </div>
@@ -258,7 +258,7 @@
                             <a href="" id="csgo" class="card-link showOverlay">Meer info...</a>
                         </div>
                         <div class="card-footer">
-                            <small class="text-muted">Vanaf 20u</small>
+                            <small class="text-muted">Vanaf 21u // Grote zaal</small>
                         </div>
                     </div>
                     <div class="card">
@@ -269,7 +269,7 @@
                             <a href="" id="hearthstone" class="card-link showOverlay">Meer info...</a>
                         </div>
                         <div class="card-footer">
-                            <small class="text-muted">Vanaf 20u</small>
+                            <small class="text-muted">Vanaf 21u // Grote zaal</small>
                         </div>
                     </div>
                     <div class="card">
@@ -280,7 +280,7 @@
                             <a href="" id="fifa" class="card-link showOverlay">Meer info...</a>
                         </div>
                         <div class="card-footer">
-                            <small class="text-muted">Vanaf 20u</small>
+                            <small class="text-muted">Vanaf 21u // Grote zaal</small>
                         </div>
                     </div>
                 </div>
@@ -294,7 +294,7 @@
                             <a href="" id="lol" class="card-link showOverlay">Meer info...</a>
                         </div>
                         <div class="card-footer">
-                            <small class="text-muted">Vanaf 20u</small>
+                            <small class="text-muted">Vanaf 21u // Grote zaal</small>
                         </div>
                     </div>
                     <div class="card">
@@ -305,7 +305,7 @@
                             <a href="" id="ssb" class="card-link showOverlay">Meer info...</a>
                         </div>
                         <div class="card-footer">
-                            <small class="text-muted">Vanaf 20u</small>
+                            <small class="text-muted">Vanaf 21u // Grote zaal</small>
                         </div>
                     </div>
                     <div class="card">
@@ -316,7 +316,7 @@
                             <a href="" id="rl" class="card-link showOverlay">Meer info...</a>
                         </div>
                         <div class="card-footer">
-                            <small class="text-muted">Vanaf 20u</small>
+                            <small class="text-muted">Vanaf 21u // Grote zaal</small>
                         </div>
                     </div>
                 </div>
@@ -392,29 +392,27 @@
     </main>
 
     <footer>
-
         <div class="footer-logo">
             <div class="master_logo">
-                <img src="img/logo/ehb-logo.jpg" alt="EhB">
-                <img src="img/logo/signpost.jpg" alt="Signpost">
-                <img src="img/logo/Acedemic_Software.gif" alt="Academic Software">
-                <img src="img/logo/agoria.jpg" alt="Agoria">
-                <img src="img/logo/switchpoint-logo-color-no_border-final.jpg" alt="Switchpoint">
-                <img src="img/logo/APC_by_Schneider_Electric_3.png" alt="APC">
-                <img src="img/logo/stylelabs.png" alt="Stylelabs">
+                <a href="https://www.erasmushogeschool.be/" target="_blank"><img src="img/logo/ehb-logo.jpg" alt="EhB"></a>
+                <a href="http://www.signpost.be/" target="_blank"><img src="img/logo/signpost.jpg" alt="Signpost"></a>
+                <a href="http://www.academicshop.be/" target="_blank"><img src="img/logo/Acedemic_Software.gif" alt="AcademicShop"></a>
+                <a href="https://www.agoria.be/" target="_blank"><img src="img/logo/agoria.jpg" alt="Agoria"></a>
+                <a href="http://www.switchpoint.be/" target="_blank"><img src="img/logo/switchpoint-logo-color-no_border-final.jpg" alt="Switchpoint"></a>
+                <a href="http://www.apc.com/be/en/" target="_blank"><img src="img/logo/APC_by_Schneider_Electric_3.png" alt="APC"></a>
+                <a href="http://careers.stylelabs.com/" target="_blank"><img src="img/logo/stylelabs.png" alt="Stylelabs"></a>
             </div>
             <div class="mid_logo">
-                <img src="img/logo/innoviris.png" alt="Innoviris Brussels">
-                <img src="img/logo/cisco_logo_large.png" alt="Cisco">
+                <a href="http://www.innoviris.be/nl" target="_blank"><img src="img/logo/innoviris.png" alt="Innoviris Brussels"></a>
+                <a href="https://www.netacad.com/" target="_blank"><img src="img/logo/cisco_logo_large.png" alt="Cisco"></a>
                 <a href="http://www.teamspeak.com/?tour=yes" target="_blank"><img src="img/logo/teamspeak_horizontal.png" alt="Teamspeak"></a>
             </div>
             <div class="basic_logo">
-                <img src="img/logo/Belnet.png" alt="Belnet">
-                <img src="img/logo/cisco_meraki.jpg" alt="Cisco - Meraki">
-                <img src="img/logo/Redcorp_logo.png" alt="Redcorp">
+                <a href="https://www.belnet.be/nl" target="_blank"><img src="img/logo/Belnet.png" alt="Belnet"></a>
+                <a href="https://meraki.cisco.com/nl/content" target="_blank"><img src="img/logo/cisco_meraki.jpg" alt="Cisco - Meraki"></a>
+                <a href="https://www.redcorp.com/nl/Home/Index" target="_blank"><img src="img/logo/Redcorp_logo.png" alt="Redcorp"></a>
             </div>
         </div>
-
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
