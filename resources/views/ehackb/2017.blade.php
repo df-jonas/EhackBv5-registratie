@@ -272,22 +272,22 @@
                     </div>
                 </div>
                 <div class="card">
-                    <img class="card-img-top" src="img/programma/hearthstone-photo.jpg" alt="Hearthstone">
+                    <img class="card-img-top" src="img/programma/lol-photo.png" alt="League of Legends">
                     <div class="card-body">
-                        <h4 class="card-title">Hearthstone</h4>
+                        <h4 class="card-title">League of Legends</h4>
                         <h6 class="card-subtitle mb-2 text-muted">PC</h6>
-                        <a href="" id="hearthstone" class="card-link showOverlay">Meer info...</a>
+                        <a href="" id="lol" class="card-link showOverlay">Meer info...</a>
                     </div>
                     <div class="card-footer">
                         <small class="text-muted">Vanaf 21u // Grote zaal</small>
                     </div>
                 </div>
                 <div class="card">
-                    <img class="card-img-top" src="img/programma/fifa-photo.jpg" alt="FIFA 18">
+                    <img class="card-img-top" src="img/programma/rocketleague-photo.jpg" alt="Rocket League">
                     <div class="card-body">
-                        <h4 class="card-title">FIFA</h4>
-                        <h6 class="card-subtitle mb-2 text-muted">PS4</h6>
-                        <a href="" id="fifa" class="card-link showOverlay">Meer info...</a>
+                        <h4 class="card-title">Rocket League</h4>
+                        <h6 class="card-subtitle mb-2 text-muted">PC</h6>
+                        <a href="" id="rl" class="card-link showOverlay">Meer info...</a>
                     </div>
                     <div class="card-footer">
                         <small class="text-muted">Vanaf 21u // Grote zaal</small>
@@ -297,11 +297,11 @@
 
             <div class="card-deck">
                 <div class="card">
-                    <img class="card-img-top" src="img/programma/lol-photo.png" alt="League of Legends">
+                    <img class="card-img-top" src="img/programma/fifa-photo.jpg" alt="FIFA 18">
                     <div class="card-body">
-                        <h4 class="card-title">League of Legends</h4>
-                        <h6 class="card-subtitle mb-2 text-muted">PC</h6>
-                        <a href="" id="lol" class="card-link showOverlay">Meer info...</a>
+                        <h4 class="card-title">FIFA</h4>
+                        <h6 class="card-subtitle mb-2 text-muted">PS4</h6>
+                        <a href="" id="fifa" class="card-link showOverlay">Meer info...</a>
                     </div>
                     <div class="card-footer">
                         <small class="text-muted">Vanaf 21u // Grote zaal</small>
@@ -319,11 +319,11 @@
                     </div>
                 </div>
                 <div class="card">
-                    <img class="card-img-top" src="img/programma/rocketleague-photo.jpg" alt="Rocket League">
+                    <img class="card-img-top" src="img/programma/hearthstone-photo.jpg" alt="Hearthstone">
                     <div class="card-body">
-                        <h4 class="card-title">Rocket League</h4>
+                        <h4 class="card-title">Hearthstone</h4>
                         <h6 class="card-subtitle mb-2 text-muted">PC</h6>
-                        <a href="" id="rl" class="card-link showOverlay">Meer info...</a>
+                        <a href="" id="hearthstone" class="card-link showOverlay">Meer info...</a>
                     </div>
                     <div class="card-footer">
                         <small class="text-muted">Vanaf 21u // Grote zaal</small>
