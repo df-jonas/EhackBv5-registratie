@@ -208,6 +208,12 @@ section#programma .card-link {
     color: #4B81BA;
 }
 
+.program_alert {
+    background-color: #4B81BA;
+    border-color: #4B81BA;
+    color: #FFFFFF;
+}
+
 /* --- CORNERS --- */
 
 .sectionwrapper {
@@ -389,11 +395,16 @@ footer {
     padding: 50px;
 }
 
+.footer-logo a {
+    display: inline-block;
+    margin: 1em;
+}
+
 .footer-logo .master_logo img {
     height: 250px;
     width: 250px;
     object-fit: contain;
-    margin: 1em;
+    vertical-align: middle;
 }
 
 .footer-logo .master_logo {
@@ -421,6 +432,25 @@ footer {
 .footer-logo .basic_logo {
     margin-bottom: 1em;
 }
+
+.master_logo div {
+    width: 300px;
+    display: inline-block;
+}
+
+.master_logo div p {
+    margin: 0;
+}
+
+.master_logo div img {
+    width: 100% !important;
+    margin: 0 !important;
+}
+
+.stylelabs {
+    height: 50px !important;
+}
+
 
 /* --- QUERIES --- */
 
