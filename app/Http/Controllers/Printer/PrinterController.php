@@ -16,7 +16,8 @@ class PrinterController extends Controller
 {
     public function index()
     {
-        return view("welcome");
+        $users = User::all();
+        return view("printer.index", array("users" => $users));
     }
 
     public function detail($id)
