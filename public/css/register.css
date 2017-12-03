@@ -19,6 +19,8 @@ header .navbar .dropdown-item {
 main {
     display: flex;
     justify-content: center;
+    background-color: #4B81BA;
+    min-height: 100vh;
 }
 
 main .card {
@@ -29,7 +31,7 @@ main .card {
 }
 
 main .loginCard {
-    width: 30%;
+    width: 450px;
 }
 
 main .card .card-img-top {
@@ -108,7 +110,7 @@ main #register3 .alert {
 }
 
 #submitbutton {
-    width: 40%;
+    width: 50%;
     margin: 0 auto;
     margin-top: 2em;
     display: block;
@@ -121,8 +123,22 @@ main #register3 .alert {
     margin-top: 1em;
 }
 
+#newAcc {
+    display: block;
+    margin: 0 auto;
+}
+
 #teamProfile {
     margin-top: 2em;
+}
+
+.confirmMessage {
+    display: block;
+    margin-top: 2em;
+}
+
+.help-block {
+    color: red;
 }
 
 @media (max-width: 1024px) {
