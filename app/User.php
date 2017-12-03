@@ -46,4 +46,11 @@ class User extends Authenticatable
         }
         return false;
     }
+
+    public function isPrinter(){
+        if ($this->isPrinter === 1) {
+            return true;
+        }
+        return false;
+    }
 }
