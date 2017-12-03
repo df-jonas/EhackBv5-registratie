@@ -69,6 +69,9 @@ Route::group(['middleware' => ['auth', 'printer']], function () {
     // Print index
     Route::get('print', 'Printer\PrinterController@index');
 
+    // Get all teams
+    Route::get('print/users', 'Printer\PrinterController@search');
+
     // Print detail
     Route::get('print/{id}', 'Printer\PrinterController@detail');
 
