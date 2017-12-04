@@ -16,7 +16,8 @@ class PrinterController extends Controller
 {
     public function index()
     {
-        return view("welcome");
+        $users = User::query()->orderBy("firstName")->orderBy("lastName")->orderBy("email")->get();
+        return view("printer.index", array("users" => $users));
     }
 
     public function detail($id)
@@ -33,10 +34,34 @@ class PrinterController extends Controller
                 ->orWhere('lastName', 'LIKE', '%' . $request->q . '%')
                 ->orWhere('email', 'LIKE', '%' . $request->q . '%')
                 ->get();
+        } else if (isset($request->id)) {
+            $users = User::query()
+                ->select('id', 'firstName', 'lastName', 'email', 'confirmed', 'isPresent')
+                ->where('id', '=', $request->id)
+                ->get();
         } else {
-            $users = User::all();
+            $users = User::query()
+                ->select('id', 'firstName', 'lastName', 'email', 'confirmed', 'isPresent')
+                ->get();
         }
 
         return response()->json($users, 200);
+    }
+
+    public function update(Request $request)
+    {
+        if (isset($request->id) && isset($request->isPresent)) {
+            $user = User::find($request->id);
+            $user->isPresent = $request->isPresent;
+            $user->save();
+
+            $user = User::query()
+                ->select('id', 'firstName', 'lastName', 'email', 'confirmed', 'isPresent')
+                ->where("id", "=", $request->id)->get();
+
+            return response()->json($user, 200);
+        }
+
+        return response()->json(array("status" => "nok"), 200);
     }
 }
