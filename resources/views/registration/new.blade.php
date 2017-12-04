@@ -211,10 +211,8 @@
                     <div class="form-group">
                         <label for="formSelect" class="control-label">Maak je keuze</label>
                         <select class="form-control" id="formSelect">
-                            <option selected value="1">Ik schrijf mij enkel in en zal niet deelnemen met een team.
-                            </option>
-                            <option value="2">Ik schrijf mij in voor competitive gaming en maak mijn eigen team.
-                            </option>
+                            <option selected value="1">Ik schrijf mij enkel in (zonder competitieve game)</option>
+                            <option value="2">Ik schrijf mij ook in voor een competitieve game.</option>
                             {{--<option value="3">Ik schrijf mij in voor competitive gaming en sluit mij aan bij een publiek
                                 team.
                             </option>--}}

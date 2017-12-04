@@ -26,7 +26,8 @@ Route::group(['middleware' => 'web'], function () {
     Route::get('/home', 'RegistrationController@show')->name('home');
 
     // Display Register form
-    Route::get('new', 'RegistrationController@new');
+    Route::get('/new', 'RegistrationController@new');
+    Route::get('/register', 'RegistrationController@new');
 
     // Mailing handlers
     Route::get('invite/{token}', 'RegistrationController@createMailInvite');
@@ -63,6 +64,23 @@ Route::group(['middleware' => 'web'], function () {
 });
 
 // Admin panel
+Route::group(['middleware' => ['auth', 'printer']], function () {
+
+    // Print index
+    Route::get('print', 'Printer\PrinterController@index');
+
+    // Get users
+    Route::get('print/users', 'Printer\PrinterController@search');
+
+    // Set user status
+    Route::post('print/users', 'Printer\PrinterController@update');
+
+    // Print detail
+    Route::get('print/{id}', 'Printer\PrinterController@detail');
+
+});
+
+// Admin panel
 Route::group(['middleware' => ['auth', 'admin']], function () {
 
     // Menu (home)
@@ -70,7 +88,7 @@ Route::group(['middleware' => ['auth', 'admin']], function () {
 
     // Show statistics
     Route::get('admin/statistics', 'Admin\AdminController@statistics');
-  
+
     // Menu (manage)
     Route::get('admin/manage', 'Admin\AdminController@manage');
 
