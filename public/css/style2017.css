@@ -264,6 +264,24 @@ section#corners ul li:nth-child(3n+3) {
     margin-right: 0;
 }
 
+/* --- VIDEO --- */
+
+section#video {
+    background-color: #0d0d35;
+    text-align: center;
+    height: auto !important;
+    min-height: auto !important;
+    float: left;
+    display: block;
+    width: 100%;
+}
+
+.fbvideo {
+    margin: 8em 0;
+    width: 800px;
+    height: 451px;
+}
+
 /* --- LOCATIE --- */
 
 section#locatie {
@@ -510,6 +528,11 @@ footer {
 
     }
 
+    .fbvideo {
+        width: 500px;
+        height: 315px;
+    }
+
 }
 
 @media (max-width: 768px) {
@@ -553,6 +576,12 @@ footer {
     .master_logo img, .mid_logo img, .basic_logo img {
         width: 90% !important;
         margin: 0 5% !important;
+    }
+
+    .fbvideo {
+        width: 300px;
+        height: 170px;
+        margin: 4em 0;
     }
 
     .footer_logo {
