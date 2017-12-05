@@ -28,6 +28,7 @@
 </head>
 
 <body id="top">
+
 <header>
     <nav class="navbar fixed-top navbar-expand-md navbar-dark" style="background-color: #0D0D35;">
         <a class="navbar-brand" href="#top">
@@ -367,8 +368,22 @@
                         <img src="img/corners/learn.png" alt=""/>
                     </button>
                 </li>
+                <li>
+                    <button id="vr" class="showOverlay">
+                        <img src="img/corners/VR.png" alt=""/>
+                    </button>
+                </li>
+                <li>
+                    <button id="teamspeak" class="showOverlay">
+                        <img src="img/corners/teamspeak.png" alt=""/>
+                    </button>
+                </li>
             </ul>
         </div>
+    </section>
+
+    <section id="video">
+        <iframe class="fbvideo" src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FEhackB%2Fvideos%2F1923912754497269%2F&show_text=0&width=560" width="560" height="315" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
     </section>
 
     <section id="locatie">

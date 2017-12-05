@@ -107,6 +107,14 @@ function overlays() {
             $("#overlay .title").html("Learn");
             $("#overlay .text").html("");
         }
+        if ($(this).attr("id") == "vr") {
+            $("#overlay .title").html("Virtual Reality");
+            $("#overlay .text").html("");
+        }
+        if ($(this).attr("id") == "teamspeak") {
+            $("#overlay .title").html("Teamspeak");
+            $("#overlay .text").html("");
+        }
 
         if ($(this).attr("id") == "fietsen") {
             $("#overlay .title").html("Stappen - Fietsen");
