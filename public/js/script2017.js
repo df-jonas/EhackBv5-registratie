@@ -14,8 +14,8 @@ function overlays() {
         event.preventDefault();
 
         if ($(this).attr("id") == "userfull") {
-            $("#overlay .title").html("TBA");
-            $("#overlay .text").html("");
+            $("#overlay .title").html("Internet of Things");
+            $("#overlay .text").html("Bart heeft een passie voor technologie en mensen, werkt als Business Alignement Manager bij Userfull. Hij is oprichter van Internet of Things Leuven en tracht via die weg verschillende stakeholders uit het IoT-landschap samen aan tafel te brengen (zoals bedrijven, fabrikanten, eindgebruikers en ontwikkelaars).<br><br>Met Internet of Things Leuven wil Bart peer-to-peerdiscussie aanmoedigen en zorgen voor kennisdeling.<br><br>Over de presentatie?<br><br>Antwoorden op vragen zoals:<br><ul><li>Wat is de echte waarde van IoT?</li><li>Wat is de impact van IoT?</li><li>Grote uitdagingen?</li><li>Hoe start je met het designen van een IoT oplossing?</li></ul>");
         }
         if ($(this).attr("id") == "accenture") {
             $("#overlay .title").html("Security war stories from the trenches");
