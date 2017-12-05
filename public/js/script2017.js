@@ -17,17 +17,17 @@ function overlays() {
             $("#overlay .title").html("TBA");
             $("#overlay .text").html("");
         }
-        if ($(this).attr("id") == "welden") {
-            $("#overlay .title").html("TBA");
-            $("#overlay .text").html("");
-        }
         if ($(this).attr("id") == "accenture") {
-            $("#overlay .title").html("TBA");
-            $("#overlay .text").html("");
+            $("#overlay .title").html("Security war stories from the trenches");
+            $("#overlay .text").html("Join Accenture’s team of security consultants and learn how they help Fortune 500 companies solve their latest security challenges.<br><br>In this session you will be immersed into first-hand stories  about the security challenges Accenture’s clients are struggling with. You will get a direct insight into what security consulting looks like and how consultants blend people, process and technology to achieve enterprises that are resilient to today’s evolving threat landscape.");
+        }
+        if ($(this).attr("id") == "welden") {
+            $("#overlay .title").html("Indie Game Development");
+            $("#overlay .text").html("Een blik achter de schermen van een independent gamebedrijf. Het verhaal achter het populaire VR-spel \"Space Pirate Trainer\", de vele facetten van het concept tot versie 1.0, en het overleven als bedrijf in een leuke, maar harde, sector.");
         }
         if ($(this).attr("id") == "ctf") {
             $("#overlay .title").html("Capture the flag");
-            $("#overlay .text").html("This is a CTF geared towards students without or with a basic knowledge about software security. We will discuss at Three subjects, SQL Injection, cross site scripting and authentication systems. We will start with an explanation (assuming zero security knowledge) after which there will be time for exercises that are presented in a CTF format. This will enable students to work together and measure their progress against their piers. There will be people guiding the students. There will be a separate CTF with different challenges without explications for those who have some knowledge or who want to try other challenges as well. <br><br>Steven Wierckx is application security expert and trainer at Toreon. He is also the project leader for the OWASP threat model project. Steven is a software and security Tester with 15 years of experience in programming, training, security testing, source code review, test automation, functional and technical analysis, development and database design. Steven has a passion for web application security. He is instructor for several secure coding, mobile app testing and threat modeling courses.");
+            $("#overlay .text").html("This is a CTF geared towards students without or with a basic knowledge about software security. We will discuss at Three subjects, SQL Injection, cross site scripting and authentication systems. We will start with an explanation (assuming zero security knowledge) after which there will be time for exercises that are presented in a CTF format. This will enable students to work together and measure their progress against their peers. There will be people guiding the students. There will be a separate CTF with different challenges without explications for those who have some knowledge or who want to try other challenges as well. <br><br>Steven Wierckx is application security expert and trainer at Toreon. He is also the project leader for the OWASP threat model project. Steven is a software and security Tester with 15 years of experience in programming, training, security testing, source code review, test automation, functional and technical analysis, development and database design. Steven has a passion for web application security. He is instructor for several secure coding, mobile app testing and threat modeling courses.");
         }
         if ($(this).attr("id") == "checkpoint") {
             $("#overlay .title").html("ZERO-Day prevention");
