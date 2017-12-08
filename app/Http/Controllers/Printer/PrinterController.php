@@ -22,7 +22,9 @@ class PrinterController extends Controller
 
     public function detail($id)
     {
-        return view("welcome");
+        $user = User::where('id',$id)->first();
+        $activities = $user->activities()->orderBy('startDate','asc')->get();
+        return view("printer.program")->with('user', $user)->with('activities', $activities);
     }
 
     public function search(Request $request)
