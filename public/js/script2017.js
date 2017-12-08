@@ -17,6 +17,10 @@ function overlays() {
             $("#overlay .title").html("Internet of Things");
             $("#overlay .text").html("Bart heeft een passie voor technologie en mensen, werkt als Business Alignement Manager bij Userfull. Hij is oprichter van Internet of Things Leuven en tracht via die weg verschillende stakeholders uit het IoT-landschap samen aan tafel te brengen (zoals bedrijven, fabrikanten, eindgebruikers en ontwikkelaars).<br><br>Met Internet of Things Leuven wil Bart peer-to-peerdiscussie aanmoedigen en zorgen voor kennisdeling.<br><br>Over de presentatie?<br><br>Antwoorden op vragen zoals:<br><ul><li>Wat is de echte waarde van IoT?</li><li>Wat is de impact van IoT?</li><li>Grote uitdagingen?</li><li>Hoe start je met het designen van een IoT oplossing?</li></ul>");
         }
+        if ($(this).attr("id") == "createcorner") {
+            $("#overlay .title").html("Create Corner");
+            $("#overlay .text").html("In de CREATE-corner kunnen de creatieve breinen aan de slag om in hackathon stijl met de nieuwste technologieën aan de slag te gaan. Microcontrollers, IOT en AI behoren tot de mogelijkheden. Doorlopend is er een photoshop contest waar ludieke prijzen worden uitgedeeld, en verschillende showcases rond virtual reality en fysieke opstellingen om de verbeelding helemaal los te laten gaan.");
+        }
         if ($(this).attr("id") == "accenture") {
             $("#overlay .title").html("Security war stories from the trenches");
             $("#overlay .text").html("Join Accenture’s team of security consultants and learn how they help Fortune 500 companies solve their latest security challenges.<br><br>In this session you will be immersed into first-hand stories  about the security challenges Accenture’s clients are struggling with. You will get a direct insight into what security consulting looks like and how consultants blend people, process and technology to achieve enterprises that are resilient to today’s evolving threat landscape.");

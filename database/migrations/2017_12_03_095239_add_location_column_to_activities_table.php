@@ -14,7 +14,7 @@ class AddLocationColumnToActivitiesTable extends Migration
     public function up()
     {
         Schema::table('activities', function (Blueprint $table) {
-            $table->string('location')->after('description');
+            $table->string('location')->after('description')->default("");
         });
     }
 

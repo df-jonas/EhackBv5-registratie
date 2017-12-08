@@ -237,6 +237,9 @@
                         <small class="text-muted">19:30 - 20:30 / NL</small>
                     </div>
                 </div>
+            </div>
+
+            <div class="card-deck">
                 <div class="card">
                     <img class="card-img-top" src="img/programma/capturetheflag.jpg" alt="Card image cap">
                     <div class="card-body">
@@ -247,6 +250,18 @@
                     </div>
                     <div class="card-footer">
                         <small class="text-muted">Vanaf 20:30 - doorlopend // Grote zaal</small>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card-img-top" src="img/programma/create.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h4 class="card-title">Create corner</h4>
+                        <h6 class="card-subtitle mb-2 text-muted"></h6>
+                        <!--<p class="card-text"></p>-->
+                        <a href="" id="createcorner" class="card-link showOverlay">Meer info...</a>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted">Vanaf 15u - doorlopend // Create corner</small>
                     </div>
                 </div>
             </div>
