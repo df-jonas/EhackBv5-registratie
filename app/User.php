@@ -53,4 +53,11 @@ class User extends Authenticatable
         }
         return false;
     }
+
+    public function isStatisticsViewer(){
+        if ($this->isStatisticsViewer === 1) {
+            return true;
+        }
+        return false;
+    }
 }

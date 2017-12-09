@@ -136,7 +136,7 @@
         });
 
         $("#print-button").on("click", function () {
-            var printWindow = window.open("/print/" + $("#selected-id").val(), 'Print', 'left=200, top=200, width=444, height=630, toolbar=0, resizable=0');
+            var printWindow = window.open("/print/" + $("#selected-id").val(), 'Print', 'left=200, top=200, width=600, height=630, toolbar=0, resizable=0');
             printWindow.addEventListener('load', function(){
                 printWindow.print();
                 printWindow.close();

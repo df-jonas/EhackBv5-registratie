@@ -111,7 +111,7 @@
     <script>
         $('#editoption_id').on('change', function () {
             $.ajax({
-                url: "/admin/manage/option/" + $('#editoption_id').val()
+                url: "/admin/option/" + $('#editoption_id').val()
             }).done(function (msg) {
                 $('#editoption_name').val(msg.name);
                 $('#editoption_price').val(msg.price);

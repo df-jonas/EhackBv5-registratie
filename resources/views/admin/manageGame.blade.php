@@ -124,7 +124,7 @@
     <script>
         $('#editgame_id').on('change', function () {
             $.ajax({
-                url: "/admin/manage/game/" + $('#editgame_id').val()
+                url: "/admin/game/" + $('#editgame_id').val()
             }).done(function (msg) {
                 $('#editgame_name').val(msg.name);
                 $('#editgame_maxpersons').val(msg.maxPlayers);

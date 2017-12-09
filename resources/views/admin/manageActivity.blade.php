@@ -122,7 +122,7 @@
     <script>
         $('#editactivity_id').on('change', function () {
             $.ajax({
-                url: "/admin/manage/activity/" + $('#editactivity_id').val()
+                url: "/admin/activity/" + $('#editactivity_id').val()
             }).done(function (msg) {
                 $('#editactivity_name').val(msg.name);
                 $('#editactivity_maxpersons').val(msg.maxUsers);

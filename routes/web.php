@@ -61,6 +61,7 @@ Route::group(['middleware' => 'web'], function () {
     // Route::get('registerteam', 'RegistrationController@createPublic');
     // Display form to register
     // Route::get('register', 'RegistrationController@create');
+
 });
 
 // Admin panel
@@ -81,30 +82,33 @@ Route::group(['middleware' => ['auth', 'printer']], function () {
 });
 
 // Admin panel
-Route::group(['middleware' => ['auth', 'admin']], function () {
-
-    // Menu (home)
-    Route::get('admin', 'Admin\AdminController@index');
+Route::group(['middleware' => ['auth', 'statistics']], function () {
 
     // Show statistics
-    Route::get('admin/statistics', 'Admin\AdminController@statistics');
+    Route::get('statistics', 'Admin\AdminController@statistics');
+
+});
+
+// Admin panel
+Route::group(['middleware' => ['auth', 'admin']], function () {
 
     // Menu (manage)
-    Route::get('admin/manage', 'Admin\AdminController@manage');
+    Route::get('admin', 'Admin\AdminController@manage');
 
     // Edit or create activity
-    Route::get('admin/manage/activity', 'Admin\AdminController@manageActivity');
-    Route::post('admin/manage/activity', 'Admin\AdminController@managePostActivity');
-    Route::get('admin/manage/activity/{activity_id}', 'Admin\AdminController@jsonServiceActivity');
+    Route::get('admin/activity', 'Admin\AdminController@manageActivity');
+    Route::post('admin/activity', 'Admin\AdminController@managePostActivity');
+    Route::get('admin/activity/{activity_id}', 'Admin\AdminController@jsonServiceActivity');
 
     // Edit or create game
-    Route::get('admin/manage/game', 'Admin\AdminController@manageGame');
-    Route::post('admin/manage/game', 'Admin\AdminController@managePostGame');
-    Route::get('admin/manage/game/{game_id}', 'Admin\AdminController@jsonServiceGame');
+    Route::get('admin/game', 'Admin\AdminController@manageGame');
+    Route::post('admin/game', 'Admin\AdminController@managePostGame');
+    Route::get('admin/game/{game_id}', 'Admin\AdminController@jsonServiceGame');
 
     // Edit or create option
-    Route::get('admin/manage/option', 'Admin\AdminController@manageOption');
-    Route::post('admin/manage/option', 'Admin\AdminController@managePostOption');
-    Route::get('admin/manage/option/{option_id}', 'Admin\AdminController@jsonServiceOption');
+    Route::get('admin/option', 'Admin\AdminController@manageOption');
+    Route::post('admin/option', 'Admin\AdminController@managePostOption');
+    Route::get('admin/option/{option_id}', 'Admin\AdminController@jsonServiceOption');
+
 });
 

@@ -7,13 +7,13 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">Manage</div>
                     <div class="panel-body">
-                        <a href="{{ url('admin/manage/activity') }}">Beheer activiteiten.</a>
+                        <a href="{{ url('admin/activity') }}">Beheer activiteiten.</a>
                     </div>
                     <div class="panel-body">
-                        <a href="{{ url('admin/manage/game') }}">Beheer games.</a>
+                        <a href="{{ url('admin/game') }}">Beheer games.</a>
                     </div>
                     <div class="panel-body">
-                        <a href="{{ url('admin/manage/option') }}">Beheer opties.</a>
+                        <a href="{{ url('admin/option') }}">Beheer opties.</a>
                     </div>
                 </div>
             </div>

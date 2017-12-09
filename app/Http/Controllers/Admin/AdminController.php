@@ -27,7 +27,7 @@ class AdminController extends Controller
 
     public function statistics()
     {
-        $userAmount = User::all()->where('isAdmin', '!=', '1')->count();
+        $userAmount = User::all()->count();
 
         $activities = Activity::with('users')->get();
 

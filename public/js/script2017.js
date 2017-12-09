@@ -64,7 +64,7 @@ function overlays() {
 
         if ($(this).attr("id") == "csgo") {
             $("#overlay .title").html("CS:GO");
-            $("#overlay .text").html("Voor het Counter Strike: Global Offensive starten we met een poulesysteem waarbij er 2 poules van 4 teams zijn. Elk team zal eenmaal tegen elk team spelen en de 2 teams die het meeste hebben gewonnen gaan door naar de volgende ronde. In deze ronde zal er met een bracket systeem gewerkt worden voor de 4 overblijvende teams. Als je wint ga je door naar de volgende ronde in de bracket als je verliest is het gedaan. De games worden gespeeld op servers voorzien door de organisatie.");
+            $("#overlay .text").html("Voor het Counter Strike: Global Offensive starten we met een poulesysteem waarbij er 2 poules van 5 teams zijn. Elk team zal eenmaal tegen elk team spelen en de 2 teams die het meeste hebben gewonnen gaan door naar de volgende ronde. In deze ronde zal er met een bracket systeem gewerkt worden voor de 4 overblijvende teams. Als je wint ga je door naar de volgende ronde in de bracket als je verliest is het gedaan. De games worden gespeeld op servers voorzien door de organisatie.");
         }
         if ($(this).attr("id") == "hearthstone") {
             $("#overlay .title").html("Hearthstone");
@@ -72,7 +72,7 @@ function overlays() {
         }
         if ($(this).attr("id") == "fifa") {
             $("#overlay .title").html("FIFA");
-            $("#overlay .text").html("<ul><li>Round of 16: 6 minuten</li><li>Quarterfinal: 6 minuten</li><li>Semifinals: 8 </li><li>Third place: 8 minuten</li><li>Final: 8 minuten</li></ul>");
+            $("#overlay .text").html("<ul><li>Round of 32: 6 minuten</li><li>Quarterfinal: 6 minuten</li><li>Semifinals: 8 </li><li>Third place: 8 minuten</li><li>Final: 8 minuten</li></ul>");
         }
         if ($(this).attr("id") == "lol") {
             $("#overlay .title").html("League of Legends");
