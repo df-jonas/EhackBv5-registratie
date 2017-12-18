@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <title>EHACKB 5</title>
-    <meta name="description" content="EHackB Editie 5">
+    <title>EhackBv5</title>
+    <meta name="description" content="EhackBv5">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
     <!--Favicon-->
@@ -57,9 +57,6 @@
                 <li class="nav-item">
                     <a class="nav-link smooth-scroll" href="#locatie">Locatie</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link smooth-scroll" href="login">Inloggen</a>
-                </li>
             </ul>
         </div>
     </nav>
@@ -88,8 +85,8 @@
         <div class="register_center">
             <div>
                 <img src="img/registreren/logoSimple.svg" alt="Logo"/>
-                <p>Registreer nu voor EhackB!<br>15 & 16 december 2017</p><br><br>
-                <a href="new" class="button">Registreren</a>
+                <p>EhackBv5 is afglopen,</p>
+                <p>hou de website in de gaten voor de volgende editie!</p>
             </div>
         </div>
 
@@ -109,9 +106,12 @@
                         <h6 class="card-subtitle mb-2 text-muted">Internet Of Things</h6>
                         <!--<p class="card-text"></p>-->
                         <a href="" id="userfull" class="card-link showOverlay">Meer info...</a>
+                        <button class="btn btn-default" href="{{asset("publications/2017_Userfull.pdf")}}">Download
+                            presentatie
+                        </button>
                     </div>
                     <div class="card-footer">
-                        <small class="text-muted">15:00 - 16:00 / NL</small>
+                        <small class="text-muted">15:00 - 16:00 / NL / Audi 4</small>
                     </div>
                 </div>
                 <div class="card">
@@ -121,9 +121,12 @@
                         <h6 class="card-subtitle mb-2 text-muted">Security &amp; Networking in the Cloud Generation</h6>
                         <!--<p class="card-text"></p>-->
                         <a href="" id="barracuda" class="card-link showOverlay">Meer info...</a>
+                        <button class="btn btn-default" href="{{asset("publications/2017_KappaData.pdf")}}">Download
+                            presentatie
+                        </button>
                     </div>
                     <div class="card-footer">
-                        <small class="text-muted">15:00 - 16:00 / NL</small>
+                        <small class="text-muted">15:00 - 16:00 / NL / Audi 5</small>
                     </div>
                 </div>
                 <div class="card">
@@ -134,9 +137,12 @@
                             engineering</h6>
                         <!--<p class="card-text"></p>-->
                         <a href="" id="guardsquare" class="card-link showOverlay">Meer info...</a>
+                        <button class="btn btn-default" href="{{asset("publications/2017_Guardsquare.pdf")}}">Download
+                            presentatie
+                        </button>
                     </div>
                     <div class="card-footer">
-                        <small class="text-muted">16:00 - 17:00 / EN</small>
+                        <small class="text-muted">16:00 - 17:00 / EN / Audi 1</small>
                     </div>
                 </div>
             </div>
@@ -152,7 +158,7 @@
                         <a href="" id="cegeka" class="card-link showOverlay">Meer info...</a>
                     </div>
                     <div class="card-footer">
-                        <small class="text-muted">16:00 - 17:00 / NL</small>
+                        <small class="text-muted">16:00 - 17:00 / NL / Audi 4</small>
                     </div>
                 </div>
                 <div class="card">
@@ -164,7 +170,7 @@
                         <a href="" id="toreon1" class="card-link showOverlay">Meer info...</a>
                     </div>
                     <div class="card-footer">
-                        <small class="text-muted">17:15 - 18:15 / NL</small>
+                        <small class="text-muted">17:15 - 18:15 / NL / Audi 5</small>
                     </div>
                 </div>
                 <div class="card">
@@ -176,7 +182,7 @@
                         <a href="" id="checkpoint" class="card-link showOverlay">Meer info...</a>
                     </div>
                     <div class="card-footer">
-                        <small class="text-muted">17:15 - 18:15 / NL</small>
+                        <small class="text-muted">17:15 - 18:15 / NL / Audi 1</small>
                     </div>
                 </div>
             </div>
@@ -191,7 +197,7 @@
                         <a href="" id="welden" class="card-link showOverlay">Meer info...</a>
                     </div>
                     <div class="card-footer">
-                        <small class="text-muted">18:15 - 19:15 / NL</small>
+                        <small class="text-muted">18:15 - 19:15 / NL / Audi 4</small>
                     </div>
                 </div>
                 <div class="card">
@@ -203,7 +209,7 @@
                         <a href="" id="accenture" class="card-link showOverlay">Meer info...</a>
                     </div>
                     <div class="card-footer">
-                        <small class="text-muted">19:30 - 20:30 / NL</small>
+                        <small class="text-muted">19:30 - 20:30 / NL / Audi 4</small>
                     </div>
                 </div>
             </div>
@@ -222,7 +228,7 @@
                         <a href="" id="toreon2" class="card-link showOverlay">Meer info...</a>
                     </div>
                     <div class="card-footer">
-                        <small class="text-muted">18:15 - 19:15 / NL</small>
+                        <small class="text-muted">18:15 - 19:15 / NL / Lokaal A.0.011</small>
                     </div>
                 </div>
                 <div class="card">
@@ -234,7 +240,7 @@
                         <a href="" id="wireshark" class="card-link showOverlay">Meer info...</a>
                     </div>
                     <div class="card-footer">
-                        <small class="text-muted">19:30 - 20:30 / NL</small>
+                        <small class="text-muted">19:30 - 20:30 / NL / Lokaal C.2.209</small>
                     </div>
                 </div>
             </div>
@@ -398,7 +404,10 @@
     </section>
 
     <section id="video">
-        <iframe class="fbvideo" src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FEhackB%2Fvideos%2F1923912754497269%2F&show_text=0&width=560" width="560" height="315" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
+        <iframe class="fbvideo"
+                src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FEhackB%2Fvideos%2F1923912754497269%2F&show_text=0&width=560"
+                width="560" height="315" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                allowTransparency="true" allowFullScreen="true"></iframe>
     </section>
 
     <section id="locatie">
@@ -436,25 +445,33 @@
         <div class="master_logo">
             <a href="https://www.erasmushogeschool.be/" target="_blank"><img src="img/logo/ehb-logo.jpg" alt="EhB"></a>
             <a href="http://www.signpost.be/" target="_blank"><img src="img/logo/signpost.jpg" alt="Signpost"></a>
-            <a href="http://www.academicshop.be/" target="_blank"><img src="img/logo/Acedemic_Software.gif" alt="AcademicShop"></a>
+            <a href="http://www.academicshop.be/" target="_blank"><img src="img/logo/Acedemic_Software.gif"
+                                                                       alt="AcademicShop"></a>
             <a href="https://www.agoria.be/" target="_blank"><img src="img/logo/agoria.jpg" alt="Agoria"></a>
-            <a href="http://www.switchpoint.be/" target="_blank"><img src="img/logo/switchpoint-logo-color-no_border-final.jpg" alt="Switchpoint"></a>
-            <a href="http://www.apc.com/be/en/" target="_blank"><img src="img/logo/APC_by_Schneider_Electric_3.png" alt="APC"></a>
+            <a href="http://www.switchpoint.be/" target="_blank"><img
+                        src="img/logo/switchpoint-logo-color-no_border-final.jpg" alt="Switchpoint"></a>
+            <a href="http://www.apc.com/be/en/" target="_blank"><img src="img/logo/APC_by_Schneider_Electric_3.png"
+                                                                     alt="APC"></a>
             <div class="stylelabs-container">
                 <p>Join us:<a href="https://careers.stylelabs.com/" target="_blank">careers.stylelabs.com</a></p>
-                <a href="https://stylelabs.com/" target="_blank"><img class="stylelabs" src="img/logo/stylelabs.png" alt="Stylelabs"></a>
+                <a href="https://stylelabs.com/" target="_blank"><img class="stylelabs" src="img/logo/stylelabs.png"
+                                                                      alt="Stylelabs"></a>
             </div>
             <a href="https://www3.lenovo.com/be/nl/" target="_blank"><img src="img/logo/lenovo.png" alt="Lenovo"></a>
         </div>
         <div class="mid_logo">
-            <a href="http://www.innoviris.be/nl" target="_blank"><img src="img/logo/innoviris.png" alt="Innoviris Brussels"></a>
+            <a href="http://www.innoviris.be/nl" target="_blank"><img src="img/logo/innoviris.png"
+                                                                      alt="Innoviris Brussels"></a>
             <a href="https://www.netacad.com/" target="_blank"><img src="img/logo/cisco_logo_large.png" alt="Cisco"></a>
-            <a href="http://www.teamspeak.com/?tour=yes" target="_blank"><img src="img/logo/teamspeak_horizontal.png" alt="Teamspeak"></a>
+            <a href="http://www.teamspeak.com/?tour=yes" target="_blank"><img src="img/logo/teamspeak_horizontal.png"
+                                                                              alt="Teamspeak"></a>
         </div>
         <div class="basic_logo">
             <a href="https://www.belnet.be/nl" target="_blank"><img src="img/logo/Belnet.png" alt="Belnet"></a>
-            <a href="https://meraki.cisco.com/nl/content" target="_blank"><img src="img/logo/cisco_meraki.jpg" alt="Cisco - Meraki"></a>
-            <a href="https://www.redcorp.com/nl/Home/Index" target="_blank"><img src="img/logo/Redcorp_logo.png" alt="Redcorp"></a>
+            <a href="https://meraki.cisco.com/nl/content" target="_blank"><img src="img/logo/cisco_meraki.jpg"
+                                                                               alt="Cisco - Meraki"></a>
+            <a href="https://www.redcorp.com/nl/Home/Index" target="_blank"><img src="img/logo/Redcorp_logo.png"
+                                                                                 alt="Redcorp"></a>
         </div>
     </div>
 </footer>
